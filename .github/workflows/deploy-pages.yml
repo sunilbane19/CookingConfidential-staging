@@ -62,4 +62,4 @@ jobs:
 # URL import queue fix 2026-09-19
 
 # Selective import upload controls 2026-09-19
-# Import Inbox source link labels + URL extraction refresh 2026-09-19 + Import review actions + shared auth 2026-09-19
+# Import Inbox source link labels + URL extraction refresh 2026-09-19 + Import Inbox session diagnostic 2026-09-19
