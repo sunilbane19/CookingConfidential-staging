@@ -54,3 +54,5 @@ jobs:
 # App cache refresh 2026-09-19
   # Sign-in redirect refresh 2026-09-19
 # Upload review + queue refresh 2026-09-19
+
+# Upload handler syntax fix + DOCX review cache refresh 2026-09-19
