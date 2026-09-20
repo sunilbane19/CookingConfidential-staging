@@ -85,3 +85,5 @@ jobs:
 # Scanned PDF OCR structure refresh 2026-09-20
 
 # Refresh import review for corrected scanned PDF OCR 2026-09-20
+
+# Fix scanned PDF method boundary + stale OCR refresh 2026-09-20
