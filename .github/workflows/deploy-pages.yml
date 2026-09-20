@@ -48,7 +48,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# persistent Import Inbox + legacy review client 2026-09-20
+# Food52 retry + true duplicate detection 2026-09-20
 # Cache refresh 2026-09-19
 # Auth redirect refresh 2026-09-19
 # App cache refresh 2026-09-19
