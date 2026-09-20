@@ -97,3 +97,5 @@ jobs:
 # Fix Review field duplication and restore Notes 2026-09-20
 
 # Remove duplicate raw Review textareas 2026-09-20
+
+# Fix Shell/Filling method parsing 2026-09-20
