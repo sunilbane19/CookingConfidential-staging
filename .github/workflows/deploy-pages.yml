@@ -71,3 +71,5 @@ jobs:
 # Import review navigation + clarity refresh 2026-09-20
 
 # Cache bump for import review 2026-09-20
+
+# Retry failed imports + extractor timeout 2026-09-20
