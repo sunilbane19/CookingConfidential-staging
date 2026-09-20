@@ -73,3 +73,5 @@ jobs:
 # Cache bump for import review 2026-09-20
 
 # Retry failed imports + extractor timeout 2026-09-20
+
+# Import review image field 2026-09-20
