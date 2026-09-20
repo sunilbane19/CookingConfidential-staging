@@ -48,7 +48,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# restore known-good Import Inbox 2026-09-20
+# restore proven legacy Supabase Import Inbox client 2026-09-20
 # Cache refresh 2026-09-19
 # Auth redirect refresh 2026-09-19
 # App cache refresh 2026-09-19
