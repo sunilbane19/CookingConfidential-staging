@@ -91,3 +91,5 @@ jobs:
 # Force scanned PDF OCR refresh on every Review 2026-09-20
 
 # Fix import inbox loading stale review module 2026-09-20
+
+# Restore rich text tools in Review 2026-09-20
