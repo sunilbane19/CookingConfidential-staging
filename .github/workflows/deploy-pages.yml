@@ -105,3 +105,5 @@ jobs:
 # Load latest scanned PDF parser in Review 2026-09-20
 
 # Preserve Review rich HTML without double escaping 2026-09-20
+
+# Show legacy imported file sources correctly 2026-09-21
