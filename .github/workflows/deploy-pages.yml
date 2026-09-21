@@ -117,3 +117,5 @@ jobs:
 # Fix source controls inside form + private original PDF viewer 2026-09-21
 
 # Fix original PDF button handler only 2026-09-21
+
+# Fix original file selection persistence 2026-09-21
