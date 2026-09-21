@@ -107,3 +107,5 @@ jobs:
 # Preserve Review rich HTML without double escaping 2026-09-20
 
 # Show legacy imported file sources correctly 2026-09-21
+
+# Fix original PDF opening from Edit 2026-09-21
