@@ -125,3 +125,4 @@ jobs:
 
 # refresh staging after sanitizer regex fix
 # refresh staging after Review module cache-bust 2026-09-24
+# refresh staging against current egress-optimization Browserless build 2026-09-25
