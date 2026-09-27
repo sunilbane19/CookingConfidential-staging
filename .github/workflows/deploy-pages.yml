@@ -139,3 +139,5 @@ jobs:
 # Deploy URL parser cleanup refinement 2 2026-09-25
 
 # Deploy latest shared parser + post-save refresh build 2026-09-25
+
+# Multi-recipe DOCX boundary fix — 2026-09-27
