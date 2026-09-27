@@ -177,3 +177,5 @@ jobs:
 # Multi 2 keep-review-dialog-open + compact actions — 2026-09-27
 
 # Clean single/multiple import selector UI — 2026-09-27
+
+# Fix legacy single DOCX review routing — 2026-09-27
