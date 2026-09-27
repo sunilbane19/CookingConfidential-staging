@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: sunilbane19/CookingConfidential
-          ref: egress-optimization
+          ref: staging-multi-recipe-v1
           path: site
 
       - name: Remove production custom domain
