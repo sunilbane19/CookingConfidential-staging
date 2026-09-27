@@ -181,3 +181,5 @@ jobs:
 # Fix legacy single DOCX review routing — 2026-09-27
 
 # Fix single recipe extraction POST 2026-09-27
+
+# Redeploy extraction handling and UI 2026-09-27
