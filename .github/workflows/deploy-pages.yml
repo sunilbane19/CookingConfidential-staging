@@ -143,3 +143,5 @@ jobs:
 # Multi-recipe DOCX boundary fix — 2026-09-27
 
 # Preserve DOCX blank paragraphs for multi-recipe boundaries — 2026-09-27
+
+# DOCX XML multi-recipe parser + cached repeat review — 2026-09-27
