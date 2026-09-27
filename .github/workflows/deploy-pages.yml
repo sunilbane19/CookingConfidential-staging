@@ -145,3 +145,5 @@ jobs:
 # Preserve DOCX blank paragraphs for multi-recipe boundaries — 2026-09-27
 
 # DOCX XML multi-recipe parser + cached repeat review — 2026-09-27
+
+# Add Ingredient category + repeat multi-review routing — 2026-09-27
