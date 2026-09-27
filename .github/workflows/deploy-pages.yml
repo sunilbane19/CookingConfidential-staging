@@ -179,3 +179,5 @@ jobs:
 # Clean single/multiple import selector UI — 2026-09-27
 
 # Fix legacy single DOCX review routing — 2026-09-27
+
+# Fix single recipe extraction POST 2026-09-27
