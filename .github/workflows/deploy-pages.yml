@@ -141,3 +141,5 @@ jobs:
 # Deploy latest shared parser + post-save refresh build 2026-09-25
 
 # Multi-recipe DOCX boundary fix — 2026-09-27
+
+# Preserve DOCX blank paragraphs for multi-recipe boundaries — 2026-09-27
