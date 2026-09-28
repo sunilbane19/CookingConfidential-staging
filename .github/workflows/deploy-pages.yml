@@ -185,3 +185,5 @@ jobs:
 # Redeploy extraction handling and UI 2026-09-27
 
 # Legacy DOC browser extraction refresh 2026-09-28
+
+# Fix legacy DOC browser parser CDN + diagnostics 2026-09-28
