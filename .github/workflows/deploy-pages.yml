@@ -193,3 +193,5 @@ jobs:
 # Deploy larger upload dialog CSS 2026-09-29
 
 # Refresh staging after legacy DOC parser fix 2026-09-28
+
+# Refresh staging for legacy DOC parser cache version 1.4.24
