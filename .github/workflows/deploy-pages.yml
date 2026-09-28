@@ -187,3 +187,5 @@ jobs:
 # Legacy DOC browser extraction refresh 2026-09-28
 
 # Fix legacy DOC browser parser CDN + diagnostics 2026-09-28
+
+# Deploy legacy DOC routing fix 2026-09-29
