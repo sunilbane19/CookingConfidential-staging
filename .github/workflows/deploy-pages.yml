@@ -197,3 +197,5 @@ jobs:
 # Refresh staging for legacy DOC parser cache version 1.4.24
 
 # Deploy legacy DOC paragraph fix and compact import controls 2026-09-28
+
+# Deploy compact recipe import controls 2026-09-28
