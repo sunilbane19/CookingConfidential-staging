@@ -39,6 +39,13 @@ jobs:
         with:
           enablement: true
 
+      - name: Generate PWA PNG icons
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin
+          rsvg-convert -w 192 -h 192 site/pwa-icon.svg -o site/pwa-icon-192.png
+          rsvg-convert -w 512 -h 512 site/pwa-icon.svg -o site/pwa-icon-512.png
+
       - name: Upload staging site
         uses: actions/upload-pages-artifact@v3
         with:
