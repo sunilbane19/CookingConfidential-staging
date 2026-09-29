@@ -224,3 +224,5 @@ jobs:
 # Trigger staging deployment for DOCX multi-recipe title detection fix 2026-09-29
 
 # Staging mirrors production main after 1.8.0 release
+
+# Deploy recipe library egress optimization to staging 2026-09-29
