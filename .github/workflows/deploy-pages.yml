@@ -215,3 +215,5 @@ jobs:
 # Review dialog sizing + title fallback refresh 2026-09-29
 
 # Trigger staging deployment for DOCX multi-recipe title detection fix 2026-09-29
+
+# 1.8.0 PWA validation deployment
