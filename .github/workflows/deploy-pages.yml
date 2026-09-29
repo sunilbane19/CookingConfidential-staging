@@ -238,3 +238,5 @@ jobs:
 
 # Refine recipe pagination UI 2026-09-29
 # Fix Pages artifact collision on workflow reruns 2026-09-29
+
+# Fix pager placement after recipe grid 2026-09-29
