@@ -49,11 +49,14 @@ jobs:
       - name: Upload staging site
         uses: actions/upload-pages-artifact@v3
         with:
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: site
 
       - name: Deploy staging site
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
 # Food52 retry + true duplicate detection 2026-09-20
 # Cache refresh 2026-09-19
@@ -230,3 +233,4 @@ jobs:
 # Deploy recipe-card lazy loading + search + pagination 2026-09-29
 
 # Refine recipe pagination UI 2026-09-29
+# Fix Pages artifact collision on workflow reruns 2026-09-29
