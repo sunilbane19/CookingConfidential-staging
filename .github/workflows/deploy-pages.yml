@@ -246,3 +246,5 @@ jobs:
 # Deploy menu toolbar upload/new-menu action fix 2026-09-30
 
 # Remove duplicate menu buttons + reliable top toolbar actions 2026-09-30
+
+# Correct menu toolbar handlers and remove duplicate menu buttons 2026-09-30
