@@ -248,3 +248,5 @@ jobs:
 # Remove duplicate menu buttons + reliable top toolbar actions 2026-09-30
 
 # Correct menu toolbar handlers and remove duplicate menu buttons 2026-09-30
+
+# Fix menu editor URL regex 2026-09-30
