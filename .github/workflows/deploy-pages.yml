@@ -256,3 +256,5 @@ jobs:
 # Menu upload RLS fix + upload screen spacing 2026-09-30
 
 # Deploy menu storage RLS + toolbar alignment 2026-09-30
+
+# Fix menu upload insert response handling 2026-09-30
