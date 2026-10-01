@@ -267,3 +267,5 @@ jobs:
 # Improve uploaded menu review and editor layout 2026-10-01
 # Refresh menu editor cache version 2026-10-01
 # Improve original DOCX preview and scroll reset 2026-10-01
+# Support multi-line selection and heading toggles 2026-10-01
+# Refresh menu editor cache for selection fixes 2026-10-01
