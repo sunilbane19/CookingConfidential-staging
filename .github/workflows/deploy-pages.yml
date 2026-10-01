@@ -264,3 +264,6 @@ jobs:
 # Require review and save before uploaded menus enter library 2026-10-01
 
 # Improve editor alignment and dialogs 2026-10-01
+# Improve uploaded menu review and editor layout 2026-10-01
+# Refresh menu editor cache version 2026-10-01
+# Improve original DOCX preview and scroll reset 2026-10-01
