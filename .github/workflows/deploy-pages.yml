@@ -271,3 +271,5 @@ jobs:
 # Refresh menu editor cache for selection fixes 2026-10-01
 
 # Menu editor date, print, selection and action consistency refresh 2026-10-02
+
+# Fix single-page print isolation 2026-10-02
