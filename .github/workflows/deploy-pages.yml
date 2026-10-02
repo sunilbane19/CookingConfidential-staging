@@ -281,3 +281,5 @@ jobs:
 # Fix menu cards to display in one row 2026-10-02
 
 # Refresh app cache for menu grid fix 2026-10-02
+
+# Force inline three-column menu grid + app cache refresh 2026-10-02
