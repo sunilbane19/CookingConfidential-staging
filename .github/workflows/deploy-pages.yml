@@ -365,3 +365,5 @@ jobs:
 # Force recipe-card image contain CSS override refresh 2026-10-03
 
 # Force recipe thumbnail intrinsic sizing to preserve complete image 2026-10-03
+
+# Trigger deployment for Wikimedia recipe image source fix 2026-10-03
