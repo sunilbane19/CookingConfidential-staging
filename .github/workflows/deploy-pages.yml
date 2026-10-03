@@ -367,3 +367,5 @@ jobs:
 # Force recipe thumbnail intrinsic sizing to preserve complete image 2026-10-03
 
 # Trigger deployment for Wikimedia recipe image source fix 2026-10-03
+
+# Fix iOS recipe PDF sharing — prepare before user gesture 2026-10-03
