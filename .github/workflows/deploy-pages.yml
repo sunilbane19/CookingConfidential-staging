@@ -336,3 +336,5 @@ jobs:
 # Menu cards final wiring — Share/Favourites/buttons 2026-10-03
 
 # Roll back staging to known-good #164 development baseline 2026-10-03
+
+# Correct exact start-of-day baseline for menu testing 2026-10-03
