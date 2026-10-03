@@ -338,3 +338,5 @@ jobs:
 # Roll back staging to known-good #164 development baseline 2026-10-03
 
 # Correct exact start-of-day baseline for menu testing 2026-10-03
+
+# Menu #164 step 1 only — PDF share 2026-10-03
