@@ -371,3 +371,5 @@ jobs:
 # Fix iOS recipe PDF sharing — prepare before user gesture 2026-10-03
 
 # Fix prepared recipe share file cache 2026-10-03
+
+# Fix blank iOS shared recipe PDFs 2026-10-03
