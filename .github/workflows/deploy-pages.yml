@@ -361,3 +361,5 @@ jobs:
 # Show complete recipe images without cropping — 2026-10-03
 
 # Fix recipe image framing without cropping — 2026-10-03
+
+# Force recipe-card image contain CSS override refresh 2026-10-03
