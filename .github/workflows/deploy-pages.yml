@@ -356,3 +356,5 @@ jobs:
 # Restore proven full recipe image layout — 2026-10-03
 
 # Show complete recipe images without cropping — 2026-10-03
+
+# Fix recipe image framing without cropping — 2026-10-03
