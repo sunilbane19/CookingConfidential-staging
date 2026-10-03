@@ -375,3 +375,5 @@ jobs:
 # Fix blank iOS shared recipe PDFs 2026-10-03
 
 # Restore known working recipe share flow 2026-10-03
+
+# Preserve iOS share activation on recipe cards 2026-10-03
