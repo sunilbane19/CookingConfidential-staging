@@ -377,3 +377,5 @@ jobs:
 # Restore known working recipe share flow 2026-10-03
 
 # Preserve iOS share activation on recipe cards 2026-10-03
+
+# Prebuild recipe PDFs before iOS share 2026-10-03
