@@ -333,6 +333,7 @@ jobs:
 # Final favourite visual state fix 2026-10-03
 # Deploy recipe thumbnail source fix — preserve complete image 2026-10-03
 # Cache-bust latest image rendering fix only 2026-10-03
+# Deploy corrected Wikimedia recipe thumbnail source + contain rendering 2026-10-03
 
 # Final menu editor module/cache fix — PDF share + favourites 2026-10-03
 
