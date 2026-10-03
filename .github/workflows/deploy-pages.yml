@@ -373,3 +373,5 @@ jobs:
 # Fix prepared recipe share file cache 2026-10-03
 
 # Fix blank iOS shared recipe PDFs 2026-10-03
+
+# Restore known working recipe share flow 2026-10-03
