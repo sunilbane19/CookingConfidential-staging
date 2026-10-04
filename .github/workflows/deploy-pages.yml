@@ -378,4 +378,4 @@ jobs:
 
 # Preserve iOS share activation on recipe cards 2026-10-03
 
-# Roll back to known-good image state before PDF testing 2026-10-04
+# Restore reliable recipe PDF generation 2026-10-04
