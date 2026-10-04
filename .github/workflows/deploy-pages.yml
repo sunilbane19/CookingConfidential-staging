@@ -378,4 +378,4 @@ jobs:
 
 # Preserve iOS share activation on recipe cards 2026-10-03
 
-# Preserve recipe line breaks in PDF 2026-10-04
+# Fix recipe PDF ingredient line breaks 2026-10-04
