@@ -64,3 +64,4 @@ jobs:
           artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
 # Deploy universal last-resort extraction fallback for testing 2026-10-05
+# Refresh staging after image rescue fallback and duplicate status fixes
