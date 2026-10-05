@@ -387,3 +387,5 @@ jobs:
 # Refresh staging after WPRM recipe extraction parser fix 2026-10-05
 
 # Deploy extraction parser v5 — cache-busted staging UI 2026-10-05
+
+# Refresh staging after isolated recipe + PDF parser v6 2026-10-05
