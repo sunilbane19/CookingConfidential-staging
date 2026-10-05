@@ -63,5 +63,4 @@ jobs:
         with:
           artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
-# Refresh staging after generic scanned PDF OCR + conditional PDF fallback 2026-10-05
-# Manual trigger recovery 2026-10-05
+# Deploy compact message dialogs 2026-10-05
