@@ -384,3 +384,4 @@ jobs:
 # Recipe field sizing + clear uploaded queue 2026-10-05
 
 # Uploads V2 extraction test trigger 2026-10-05
+# Refresh staging after WPRM recipe extraction parser fix 2026-10-05
