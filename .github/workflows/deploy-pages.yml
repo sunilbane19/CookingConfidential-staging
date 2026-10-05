@@ -389,3 +389,5 @@ jobs:
 # Deploy extraction parser v5 — cache-busted staging UI 2026-10-05
 
 # Refresh staging after isolated recipe + PDF parser v6 2026-10-05
+
+# Refresh staging after generic scanned PDF OCR + conditional PDF fallback 2026-10-05
