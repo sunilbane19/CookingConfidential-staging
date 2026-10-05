@@ -63,4 +63,4 @@ jobs:
         with:
           artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
-# Deploy clear temporary upload queue 2026-10-05
+# Deploy restore multi-recipe text parsing 2026-10-05
