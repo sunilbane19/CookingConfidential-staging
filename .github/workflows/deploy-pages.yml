@@ -67,3 +67,5 @@ jobs:
 # Refresh staging after image rescue fallback and duplicate status fixes
 
 # Refresh staging for Reader -> Structure Parser -> Quality Check -> Review/Rescue pipeline
+
+# Refresh staging for generic rescue section parser fix 2026-10-06
