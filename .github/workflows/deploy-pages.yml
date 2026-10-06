@@ -71,3 +71,5 @@ jobs:
 # Refresh staging for generic rescue section parser fix 2026-10-06
 
 # Refresh staging for shared structure parser and rescue UI cleanup 2026-10-06
+
+# Refresh staging for single-recipe rescue UI cleanup 2026-10-06
