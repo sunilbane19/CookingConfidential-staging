@@ -65,3 +65,5 @@ jobs:
 
 # Deploy universal last-resort extraction fallback for testing 2026-10-05
 # Refresh staging after image rescue fallback and duplicate status fixes
+
+# Refresh staging for Reader -> Structure Parser -> Quality Check -> Review/Rescue pipeline
