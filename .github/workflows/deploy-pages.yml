@@ -108,3 +108,5 @@ jobs:
 # Deploy PDF routing diagnostics 2026-10-07
 
 # Fix PDF diagnostic review syntax and cache-bust review module 2026-10-07
+
+# Trigger staging rebuild after PDF review fix
