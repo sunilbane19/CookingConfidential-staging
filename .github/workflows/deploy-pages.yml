@@ -110,3 +110,5 @@ jobs:
 # Fix PDF diagnostic review syntax and cache-bust review module 2026-10-07
 
 # Trigger staging rebuild after PDF review fix
+
+# Trigger staging rebuild after OCR flattened-text parser fix 2026-10-07
