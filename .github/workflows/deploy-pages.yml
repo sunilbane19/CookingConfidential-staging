@@ -84,3 +84,5 @@ jobs:
 # Refresh source cache-busted review path 2026-10-07 15:50
 
 # Deploy quality gate cache refresh 2026-10-07
+
+# Deploy quality gate duplicate-section fix 2026-10-07
