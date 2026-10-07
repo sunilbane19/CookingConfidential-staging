@@ -106,3 +106,5 @@ jobs:
 # Deploy cuisine layout and consolidated PDF parser title fix 2026-10-07
 
 # Deploy PDF routing diagnostics 2026-10-07
+
+# Fix PDF diagnostic review syntax and cache-bust review module 2026-10-07
