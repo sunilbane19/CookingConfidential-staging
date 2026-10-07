@@ -65,15 +65,10 @@ jobs:
 
 # Deploy universal last-resort extraction fallback for testing 2026-10-05
 # Refresh staging after image rescue fallback and duplicate status fixes
-
 # Refresh staging for Reader -> Structure Parser -> Quality Check -> Review/Rescue pipeline
-
 # Refresh staging for generic rescue section parser fix 2026-10-06
-
 # Refresh staging for shared structure parser and rescue UI cleanup 2026-10-06
-
 # Refresh staging for single-recipe rescue UI cleanup 2026-10-06
-
 # Refresh staging for extraction failure handling and extractor v9 2026-10-07
-
 # Refresh staging after restoring universal rescue fallback for extraction load failures 2026-10-07
+# Refresh staging after iOS/Gmail rescue review button fix 2026-10-07
