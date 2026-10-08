@@ -120,3 +120,5 @@ jobs:
 # Refresh staging after review-module cache bust 2026-10-07
 
 # Refresh staging with full import-module cache bust 2026-10-07
+
+# Refresh staging after fixing frozen ready-PDF review path 2026-10-08
