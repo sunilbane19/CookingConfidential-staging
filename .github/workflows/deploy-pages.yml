@@ -132,3 +132,5 @@ jobs:
 # Deploy fresh OCR profile invalidation so existing scanned PDFs rerun under PSM 3 2026-10-08
 
 # Deploy directly editable Cuisine suggestions and compact Dietary suitability spacing 2026-10-08
+
+# Deploy consolidated single-recipe PDF import changes 2026-10-08
