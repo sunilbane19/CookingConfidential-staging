@@ -134,3 +134,5 @@ jobs:
 # Deploy directly editable Cuisine suggestions and compact Dietary suitability spacing 2026-10-08
 
 # Deploy consolidated single-recipe PDF import changes 2026-10-08
+
+# Refresh staging after eliminating redundant OCR import-row read 2026-10-08
