@@ -148,3 +148,5 @@ jobs:
 # Deploy single-image review diagnostics 2026-10-08
 
 # Deploy scanned PDF OCR fraction artefact repair 2026-10-08
+
+# Deploy scanned PDF OCR import-source diagnostics 2026-10-08
