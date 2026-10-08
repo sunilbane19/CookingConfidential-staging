@@ -144,3 +144,5 @@ jobs:
 # Deploy quality gate diagnostics 2026-10-08
 
 # Fix quality gate instruction count scope 2026-10-08
+
+# Deploy single-image review diagnostics 2026-10-08
