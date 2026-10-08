@@ -124,3 +124,5 @@ jobs:
 # Refresh staging after fixing frozen ready-PDF review path 2026-10-08
 
 # Refresh staging after OCR title candidate / filename fallback fix 2026-10-08
+
+# Refresh staging after generalized OCR title detection 2026-10-08
