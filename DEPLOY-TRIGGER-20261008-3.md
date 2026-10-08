@@ -1,1 +1,1 @@
-# Trigger Review module cache-bust deployment
+# Trigger scanned OCR import diagnostics deployment
