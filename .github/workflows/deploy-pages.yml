@@ -126,3 +126,5 @@ jobs:
 # Refresh staging after OCR title candidate / filename fallback fix 2026-10-08
 
 # Refresh staging after generalized OCR title detection 2026-10-08
+
+# Deploy scanned PDF OCR PSM 3 change 2026-10-08
