@@ -1,1 +1,1 @@
-# Trigger OCR parser diagnostics deployment
+# Trigger Review module cache-bust deployment
