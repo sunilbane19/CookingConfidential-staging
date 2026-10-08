@@ -128,3 +128,5 @@ jobs:
 # Refresh staging after generalized OCR title detection 2026-10-08
 
 # Deploy scanned PDF OCR PSM 3 change 2026-10-08
+
+# Deploy fresh OCR profile invalidation so existing scanned PDFs rerun under PSM 3 2026-10-08
