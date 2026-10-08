@@ -140,3 +140,5 @@ jobs:
 # Deploy detailed scanned PDF OCR diagnostics 2026-10-08
 
 # Deploy review-stage diagnostics for PDF OCR freeze 2026-10-08
+
+# Deploy quality gate diagnostics 2026-10-08
