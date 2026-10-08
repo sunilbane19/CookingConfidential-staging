@@ -136,3 +136,5 @@ jobs:
 # Deploy consolidated single-recipe PDF import changes 2026-10-08
 
 # Refresh staging after eliminating redundant OCR import-row read 2026-10-08
+
+# Deploy detailed scanned PDF OCR diagnostics 2026-10-08
