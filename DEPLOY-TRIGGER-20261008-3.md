@@ -25,3 +25,5 @@ Deploy parser 1.0.48: support Food52 Shell/Filling grouped ingredients and Step 
 Deploy OCR parser 1.0.49: stop notes at Special Equipment and downstream site sections; filter OCR metadata fragments in description. Source commit a0d748e3b64cd90d0a93947ec53761012e91b226.
 
 Staging refresh for OCR parser 1.0.50. Source b9f686850e8854a0dea32ac7926099824d59dbaa.
+
+Refresh OCR parser 1.0.51: normalize title punctuation for intro matching and stop description at byline/section boundaries. Source commit e91571fd8b5aa92d9e09f7eb508bd693fe9d078e.
