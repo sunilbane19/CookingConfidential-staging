@@ -160,3 +160,5 @@ jobs:
 # Deploy OCR title and method cleanup 2026-10-09
 
 # Deploy wrapped scanned recipe title fix 2026-10-09
+
+# Deploy generalized scanned-PDF title and method parsing 2026-10-09
