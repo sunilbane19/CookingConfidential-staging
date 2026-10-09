@@ -168,3 +168,5 @@ jobs:
 # Deploy scanned-PDF title and notes regression fix 2026-10-09
 
 # Deploy Recipe notes boundary and description metadata cleanup 2026-10-09
+
+# Deploy grouped Recipe notes extraction 2026-10-09
