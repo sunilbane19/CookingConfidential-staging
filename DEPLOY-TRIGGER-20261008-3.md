@@ -21,3 +21,5 @@ Deploy scanned PDF description boundary, notes end-boundary, and Chermoula metho
 Deploy OCR parser 1.0.46: tighten Chermoula trailing method artefact and Grandma's notes end boundary, 2026-10-09. Source commit 28f2dd1f52ec3a95d3bc390339e942930c9ae572.
 
 Deploy parser 1.0.48: support Food52 Shell/Filling grouped ingredients and Step N methods; preserve description after byline, 2026-10-09. Source commit c0de31abb232bbbfed84ff15100232c1ab7730ee.
+
+Deploy OCR parser 1.0.49: stop notes at Special Equipment and downstream site sections; filter OCR metadata fragments in description. Source commit a0d748e3b64cd90d0a93947ec53761012e91b226.
