@@ -196,3 +196,5 @@ jobs:
 # Deploy scanned PDF description diagnostics 1.0.60 2026-10-09
 
 # Deploy import loader cache bust for OCR parser 1.0.60 2026-10-09
+
+# Deploy scanned PDF description artifact cleanup 1.0.61 2026-10-09
