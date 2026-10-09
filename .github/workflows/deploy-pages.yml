@@ -152,3 +152,5 @@ jobs:
 # Deploy scanned PDF OCR import-source diagnostics 2026-10-08
 
 # Deploy scanned OCR literal-escape syntax correction 2026-10-09
+
+# Deploy scanned OCR dependency import diagnostics 2026-10-09
