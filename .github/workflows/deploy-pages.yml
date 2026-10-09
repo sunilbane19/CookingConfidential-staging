@@ -156,3 +156,5 @@ jobs:
 # Deploy scanned OCR dependency import diagnostics 2026-10-09
 
 # Refresh staging for OCR parser cleanup 2026-10-09
+
+# Deploy OCR title and method cleanup 2026-10-09
