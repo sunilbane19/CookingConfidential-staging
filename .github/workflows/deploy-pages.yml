@@ -166,3 +166,5 @@ jobs:
 # Deploy generalized Chimichurri scanned-PDF title, intro, ingredient and notes cleanup 2026-10-09
 
 # Deploy scanned-PDF title and notes regression fix 2026-10-09
+
+# Deploy Recipe notes boundary and description metadata cleanup 2026-10-09
