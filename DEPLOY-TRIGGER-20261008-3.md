@@ -27,3 +27,5 @@ Deploy OCR parser 1.0.49: stop notes at Special Equipment and downstream site se
 Staging refresh for OCR parser 1.0.50. Source b9f686850e8854a0dea32ac7926099824d59dbaa.
 
 Refresh OCR parser 1.0.51: normalize title punctuation for intro matching and stop description at byline/section boundaries. Source commit e91571fd8b5aa92d9e09f7eb508bd693fe9d078e.
+
+Deploy parser 1.0.52: do not treat author byline as end of description; continue through recipe metadata to genuine introduction, stop at section/page boundary. Source commit f6935b9819ca4ccf333d241f7dfba4c44e44b8f5. Regression scope: Greek Zucchini Fritters, Grandma’s Zucchini Cake, Fatima’s Vegetarian Kibbeh; preserve Chimichurri and Mango Salad.
