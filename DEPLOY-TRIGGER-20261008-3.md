@@ -11,3 +11,5 @@ Force fresh inbox entry module URL 1.0.65, 2026-10-09.
 Deploy generalized OCR title, description and numeric servings fix (parser 1.0.34) 2026-10-09.
 
 Deploy generalized single-word OCR title-fragment rejection (parser 1.0.35) 2026-10-09.
+
+Deploy OCR promotional-fragment title/description filter parser 1.0.36 2026-10-09.
