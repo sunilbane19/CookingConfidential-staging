@@ -184,3 +184,5 @@ jobs:
 # Refresh staging after Chermoula parser follow-up 2026-10-09 14:20 UTC
 
 # Refresh staging after Chermoula intro and serving sentence recovery 2026-10-09
+
+# Deploy corrected OCR intro regex and serving sentence recovery 2026-10-09
