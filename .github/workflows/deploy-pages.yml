@@ -176,3 +176,5 @@ jobs:
 # Guard against fragmented OCR description regressions 2026-10-09
 
 # Deploy recipe title-fragment description guard 2026-10-09
+
+# Refresh staging with scanned-PDF PSM 6 and standard Ingredients/Directions parser 2026-10-09
