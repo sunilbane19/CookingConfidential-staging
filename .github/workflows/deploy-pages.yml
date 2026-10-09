@@ -180,3 +180,5 @@ jobs:
 # Refresh staging with scanned-PDF PSM 6 and standard Ingredients/Directions parser 2026-10-09
 
 # Refresh staging after scanned PDF description, timing cleanup and OCR cache-bust fix 2026-10-09
+
+# Refresh staging after Chermoula parser follow-up 2026-10-09 14:20 UTC
