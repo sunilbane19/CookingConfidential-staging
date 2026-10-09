@@ -15,3 +15,5 @@ Deploy generalized single-word OCR title-fragment rejection (parser 1.0.35) 2026
 Deploy OCR promotional-fragment title/description filter parser 1.0.36 2026-10-09.
 
 Deploy scanned PDF page-one title boundary fix (parser 1.0.44) 2026-10-09. Source commit 0fc7d83ca646f64fbbe5c9238db53a0a31f94481.
+
+Deploy scanned PDF description boundary, notes end-boundary, and Chermoula method cleanup (parser 1.0.45), 2026-10-09. Source commit 4c881ae10cd0df2ce1599ff30a3ed28fb57b335b.
