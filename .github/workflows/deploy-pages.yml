@@ -174,3 +174,5 @@ jobs:
 # Deploy consistent Recipe Notes parent label 2026-10-09
 
 # Guard against fragmented OCR description regressions 2026-10-09
+
+# Deploy recipe title-fragment description guard 2026-10-09
