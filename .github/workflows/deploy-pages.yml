@@ -194,3 +194,5 @@ jobs:
 # Deploy targeted Chimichurri introduction recovery 1.0.59 2026-10-09
 
 # Deploy scanned PDF description diagnostics 1.0.60 2026-10-09
+
+# Deploy import loader cache bust for OCR parser 1.0.60 2026-10-09
