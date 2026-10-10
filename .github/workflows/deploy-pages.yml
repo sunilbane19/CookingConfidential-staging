@@ -241,3 +241,4 @@ jobs:
 
 # Deploy OCR candidate selection and strict scanned-PDF quality gate 2026-10-10
 # Deploy Tzatziki recipe-card selection, shorter OCR, and strict PDF quality gate 2026-10-10
+# Deploy final first-page description boundary fix 2026-10-10
