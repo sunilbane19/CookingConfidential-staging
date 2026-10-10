@@ -1,0 +1,1 @@
+Deploy DOCX rich-section output fix; parser v1.0.4 and review v1.4.104. DOCX-only. 2026-10-10
