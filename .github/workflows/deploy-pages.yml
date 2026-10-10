@@ -230,3 +230,5 @@ jobs:
 # Improve headline recovery around OCR social controls and classify author credits as notes 1.0.73 2026-10-10
 
 # Fix first-page title loss, recognize scaled Ingredients heading, and keep author credits out of descriptions 1.0.74 2026-10-10
+
+# Fix wrapped zucchini-fritter title and retry weak Tzatziki OCR with PSM 3; parser 1.0.76 2026-10-10
