@@ -240,3 +240,4 @@ jobs:
 # Deploy OCR description noise rejection and clean lead selection 1.0.79 2026-10-10
 
 # Deploy OCR candidate selection and strict scanned-PDF quality gate 2026-10-10
+# Deploy Tzatziki recipe-card selection, shorter OCR, and strict PDF quality gate 2026-10-10
