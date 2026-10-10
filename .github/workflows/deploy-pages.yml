@@ -204,3 +204,5 @@ jobs:
 # Deploy import-review description sanitation fix 1.4.67 2026-10-10
 
 # Redeploy corrected import description sanitizer regex 2026-10-10
+
+# Deploy targeted social-media OCR description guard 1.4.68 2026-10-10
