@@ -208,3 +208,5 @@ jobs:
 # Deploy targeted social-media OCR description guard 1.4.68 2026-10-10
 
 # Deploy minimal description cleanup: remove Keep Screen Awake only 2026-10-10
+
+# Final generalized scanned-PDF parser 1.0.64 and review separation 1.4.70 2026-10-10
