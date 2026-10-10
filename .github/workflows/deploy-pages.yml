@@ -238,3 +238,5 @@ jobs:
 # Deploy generalized description candidate selection and 100-word guard rail, parser 1.0.78 2026-10-10
 
 # Deploy OCR description noise rejection and clean lead selection 1.0.79 2026-10-10
+
+# Deploy OCR candidate selection and strict scanned-PDF quality gate 2026-10-10
