@@ -206,3 +206,5 @@ jobs:
 # Redeploy corrected import description sanitizer regex 2026-10-10
 
 # Deploy targeted social-media OCR description guard 1.4.68 2026-10-10
+
+# Deploy minimal description cleanup: remove Keep Screen Awake only 2026-10-10
