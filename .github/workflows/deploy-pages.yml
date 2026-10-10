@@ -216,3 +216,5 @@ jobs:
 # Fix parser syntax error affecting Greek zucchini fritters rescue path 1.0.65 2026-10-10
 
 # General recipe-card title and Recipe Information notes recovery parser 1.0.66 2026-10-10
+
+# General recipe headline recovery and Recipe Information cleanup parser 1.0.68 2026-10-10
