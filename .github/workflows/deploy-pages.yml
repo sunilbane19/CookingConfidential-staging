@@ -218,3 +218,5 @@ jobs:
 # General recipe-card title and Recipe Information notes recovery parser 1.0.66 2026-10-10
 
 # General recipe headline recovery and Recipe Information cleanup parser 1.0.68 2026-10-10
+
+# Classify author credits and recipe timings as notes rather than description 1.0.69 2026-10-10
