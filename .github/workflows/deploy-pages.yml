@@ -200,3 +200,5 @@ jobs:
 # Deploy scanned PDF description artifact cleanup 1.0.61 2026-10-09
 
 # Deploy final OCR description sanitation 1.0.62 2026-10-09
+
+# Deploy import-review description sanitation fix 1.4.67 2026-10-10
