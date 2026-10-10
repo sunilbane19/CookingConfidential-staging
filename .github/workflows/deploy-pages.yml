@@ -228,3 +228,5 @@ jobs:
 # Join wrapped recipe headline lines before description validation 1.0.72 2026-10-10
 
 # Improve headline recovery around OCR social controls and classify author credits as notes 1.0.73 2026-10-10
+
+# Fix first-page title loss, recognize scaled Ingredients heading, and keep author credits out of descriptions 1.0.74 2026-10-10
