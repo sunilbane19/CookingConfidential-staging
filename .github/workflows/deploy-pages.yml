@@ -226,3 +226,5 @@ jobs:
 # Recover recipe headlines when OCR merges social controls into the same line 1.0.71 2026-10-10
 
 # Join wrapped recipe headline lines before description validation 1.0.72 2026-10-10
+
+# Improve headline recovery around OCR social controls and classify author credits as notes 1.0.73 2026-10-10
