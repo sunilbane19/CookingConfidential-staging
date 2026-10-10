@@ -251,3 +251,4 @@ jobs:
 # Deploy opening-prose recovery parser 1.0.87 2026-10-10
 # Deploy final description selection safeguard 1.0.88 2026-10-10
 # Deploy OCR title regression fix 1.0.89 / review 1.4.96 2026-10-10
+# Restore ingredients-only scanned recipe acceptance 2026-10-10
