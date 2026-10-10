@@ -245,3 +245,4 @@ jobs:
 # Deploy OCR field sanitation and preserve structured recipe before quality gate 2026-10-10
 # Deploy final notes-field sanitation follow-up 2026-10-10
 # Deploy cache-busted OCR sanitation parser 1.0.83 2026-10-10
+# Deploy introduction-based description recovery 1.0.84 2026-10-10
