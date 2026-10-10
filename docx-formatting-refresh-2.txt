@@ -1,0 +1,1 @@
+Refresh staging after DOCX section-heading support and parser cache version 1.0.2 / review 1.4.101. No scanned-PDF parser changes. 2026-10-10
