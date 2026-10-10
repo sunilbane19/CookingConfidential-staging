@@ -212,3 +212,5 @@ jobs:
 # Final generalized scanned-PDF parser 1.0.64 and review separation 1.4.70 2026-10-10
 
 # Include final metadata-preservation adjustment in OCR parser 1.0.64 2026-10-10
+
+# Fix parser syntax error affecting Greek zucchini fritters rescue path 1.0.65 2026-10-10
