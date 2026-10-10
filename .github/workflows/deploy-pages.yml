@@ -224,3 +224,5 @@ jobs:
 # Recover coherent recipe-card headlines and remove social tags from notes 1.0.70 2026-10-10
 
 # Recover recipe headlines when OCR merges social controls into the same line 1.0.71 2026-10-10
+
+# Join wrapped recipe headline lines before description validation 1.0.72 2026-10-10
