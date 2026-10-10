@@ -214,3 +214,5 @@ jobs:
 # Include final metadata-preservation adjustment in OCR parser 1.0.64 2026-10-10
 
 # Fix parser syntax error affecting Greek zucchini fritters rescue path 1.0.65 2026-10-10
+
+# General recipe-card title and Recipe Information notes recovery parser 1.0.66 2026-10-10
