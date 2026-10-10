@@ -236,3 +236,5 @@ jobs:
 # Keep Tesseract PSM 6; render PDF at 250 DPI and log page OCR previews for diagnosis, parser 1.0.77 2026-10-10
 
 # Deploy generalized description candidate selection and 100-word guard rail, parser 1.0.78 2026-10-10
+
+# Deploy OCR description noise rejection and clean lead selection 1.0.79 2026-10-10
