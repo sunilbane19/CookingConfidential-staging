@@ -1,0 +1,1 @@
+Refresh static site after cache-busting DOCX parser export fix. Parser ref 1.0.3, review ref 1.4.103. 2026-10-10
