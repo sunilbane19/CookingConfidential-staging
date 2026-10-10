@@ -1,0 +1,1 @@
+Refresh staging for DOCX formatting preservation in review fields. DOCX-only enrichment; scanned PDF/OCR path unchanged. 2026-10-10
