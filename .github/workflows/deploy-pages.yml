@@ -220,3 +220,5 @@ jobs:
 # General recipe headline recovery and Recipe Information cleanup parser 1.0.68 2026-10-10
 
 # Classify author credits and recipe timings as notes rather than description 1.0.69 2026-10-10
+
+# Recover coherent recipe-card headlines and remove social tags from notes 1.0.70 2026-10-10
