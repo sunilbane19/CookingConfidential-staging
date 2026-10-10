@@ -232,3 +232,5 @@ jobs:
 # Fix first-page title loss, recognize scaled Ingredients heading, and keep author credits out of descriptions 1.0.74 2026-10-10
 
 # Fix wrapped zucchini-fritter title and retry weak Tzatziki OCR with PSM 3; parser 1.0.76 2026-10-10
+
+# Keep Tesseract PSM 6; render PDF at 250 DPI and log page OCR previews for diagnosis, parser 1.0.77 2026-10-10
