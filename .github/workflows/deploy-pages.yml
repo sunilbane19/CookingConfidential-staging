@@ -265,3 +265,4 @@ jobs:
 # Fix Upload selected to process checked items only 2026-10-11
 # Refresh staging for neutral rich-text toolbar state 2026-10-11
 # Fix inherited bold state in empty rich-text fields 2026-10-11
+# Correct neutral toolbar reset logic after staging feedback 2026-10-11
