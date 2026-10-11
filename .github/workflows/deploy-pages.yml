@@ -270,3 +270,5 @@ jobs:
 # Redeploy trigger: rich-text toolbar focus/toggle correction
 
 # Redeploy trigger: restore original rich-text toolbar handling with neutral empty state
+
+# Redeploy trigger: image OCR diagnostic instrumentation
