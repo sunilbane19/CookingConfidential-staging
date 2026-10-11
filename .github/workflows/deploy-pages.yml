@@ -256,3 +256,5 @@ jobs:
 # Refresh staging for combined recipe/menu partial search and compact dietary list items 2026-10-11
 
 # Halve dietary/suitability list item spacing on staging 2026-10-11
+
+# Fix dietary list row height override 2026-10-11
