@@ -260,3 +260,4 @@ jobs:
 # Fix dietary list row height override 2026-10-11
 
 # Refresh staging to hide Recipe URL controls and reclaim import-dialog space 2026-10-11
+# Roll back staging import screen to before Recipe URL removal 2026-10-11
