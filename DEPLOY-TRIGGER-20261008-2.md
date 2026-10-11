@@ -5,3 +5,5 @@
 # Neutralize rich toolbar hover/focus styling 2026-10-11
 
 # Restore rich toolbar selection and formatting commands 2026-10-11
+
+# Deploy cache-busted recipe editor toolbar fix 2026-10-11
