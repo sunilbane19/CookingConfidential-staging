@@ -254,3 +254,5 @@ jobs:
 # Restore ingredients-only scanned recipe acceptance 2026-10-10
 
 # Refresh staging for combined recipe/menu partial search and compact dietary list items 2026-10-11
+
+# Halve dietary/suitability list item spacing on staging 2026-10-11
