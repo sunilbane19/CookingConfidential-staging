@@ -268,3 +268,5 @@ jobs:
 # Correct neutral toolbar reset logic after staging feedback 2026-10-11
 
 # Redeploy trigger: rich-text toolbar focus/toggle correction
+
+# Redeploy trigger: restore original rich-text toolbar handling with neutral empty state
