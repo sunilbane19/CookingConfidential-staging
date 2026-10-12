@@ -280,3 +280,5 @@ jobs:
 # Redeploy staging: images must wait for explicit Review after upload.
 
 # Redeploy staging: route explicit image Review to generic image reader.
+
+# Redeploy staging after correcting rescue OCR Tesseract import.
