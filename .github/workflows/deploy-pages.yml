@@ -302,3 +302,5 @@ jobs:
 # Redeploy corrected parser-boundary diagnostic regexes 2026-10-12
 
 # Force reload upload module so parser diagnostics are loaded 2026-10-12
+
+# Redeploy staging: use Vision transcription for image imports, then image-specific parser 2026-10-12
