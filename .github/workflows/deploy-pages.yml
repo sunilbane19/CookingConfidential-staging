@@ -284,3 +284,5 @@ jobs:
 # Redeploy staging after correcting rescue OCR Tesseract import.
 
 # Refresh cache-busted image review and Tesseract rescue modules 2026-10-12.
+
+# Deploy cache-busted single-image Review route; bypass Vision and multi-recipe path.
