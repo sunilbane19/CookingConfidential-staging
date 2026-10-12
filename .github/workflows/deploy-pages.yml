@@ -296,3 +296,5 @@ jobs:
 # Decode literal escaped OCR line breaks before cleanup and generic recipe parsing 2026-10-12.
 
 # Handle double-escaped OCR line breaks before recipe parsing 2026-10-12.
+
+# Deploy parser-boundary diagnostics for single-image OCR 2026-10-12
