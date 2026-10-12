@@ -286,3 +286,5 @@ jobs:
 # Refresh cache-busted image review and Tesseract rescue modules 2026-10-12.
 
 # Deploy cache-busted single-image Review route; bypass Vision and multi-recipe path.
+
+# Deploy direct single-image Review handler, bypass Vision and multi-recipe routing.
