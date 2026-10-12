@@ -282,3 +282,5 @@ jobs:
 # Redeploy staging: route explicit image Review to generic image reader.
 
 # Redeploy staging after correcting rescue OCR Tesseract import.
+
+# Refresh cache-busted image review and Tesseract rescue modules 2026-10-12.
