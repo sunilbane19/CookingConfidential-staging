@@ -298,3 +298,5 @@ jobs:
 # Handle double-escaped OCR line breaks before recipe parsing 2026-10-12.
 
 # Deploy parser-boundary diagnostics for single-image OCR 2026-10-12
+
+# Redeploy corrected parser-boundary diagnostic regexes 2026-10-12
