@@ -290,3 +290,5 @@ jobs:
 # Deploy direct single-image Review handler, bypass Vision and multi-recipe routing.
 
 # Deploy OCR candidate selection and conservative cleanup stages 1-2.
+
+# Refresh deployed index cache key for the single-image Review route.
