@@ -292,3 +292,5 @@ jobs:
 # Deploy OCR candidate selection and conservative cleanup stages 1-2.
 
 # Refresh deployed index cache key for the single-image Review route.
+
+# Decode literal escaped OCR line breaks before cleanup and generic recipe parsing 2026-10-12.
