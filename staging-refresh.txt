@@ -1,1 +1,1 @@
-Refresh staging: fix Tesseract.js createWorker import for generalized image OCR rescue. 2026-10-12
+Refresh staging: fix undefined getItem in image review after OCR parser response. 2026-10-12
