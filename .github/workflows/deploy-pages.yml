@@ -320,3 +320,5 @@ jobs:
 # Redeploy general image OCR cleanup 2026-10-12
 
 # Redeploy cooking-class C/T/t quantity normalization 2026-10-12
+
+# Fix escaped quantity OCR regex and refresh image import caches 2026-10-12
