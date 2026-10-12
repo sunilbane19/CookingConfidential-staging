@@ -1,1 +1,1 @@
-Refresh staging: generalized JPG/PNG OCR text-first pipeline, worker/error diagnostics, no filename-as-OCR fallback. 2026-10-12
+Refresh staging: fix Tesseract.js createWorker import for generalized image OCR rescue. 2026-10-12
