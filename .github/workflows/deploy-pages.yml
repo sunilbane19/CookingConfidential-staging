@@ -316,3 +316,5 @@ jobs:
 # Redeploy after correcting regex escaping in image OCR cleanup 2026-10-12
 
 # Redeploy image OCR unit and method cleanup 2026-10-12
+
+# Redeploy general image OCR cleanup 2026-10-12
