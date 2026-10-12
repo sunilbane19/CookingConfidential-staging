@@ -1,1 +1,1 @@
-Refresh staging: fresh image OCR retry bypass stored text. 2026-10-12 08:10
+Rollback staging application code to deployment #405 baseline; discard subsequent image OCR diagnostics/experiments. 2026-10-12
