@@ -314,3 +314,5 @@ jobs:
 # Redeploy staging after image OCR noise cleanup refinements 2026-10-12
 
 # Redeploy after correcting regex escaping in image OCR cleanup 2026-10-12
+
+# Redeploy image OCR unit and method cleanup 2026-10-12
