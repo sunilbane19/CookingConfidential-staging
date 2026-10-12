@@ -306,3 +306,5 @@ jobs:
 # Redeploy staging: use Vision transcription for image imports, then image-specific parser 2026-10-12
 
 # Refresh staging: revert image OCR to Tesseract-only and continue image cleanup tuning 2026-10-12
+
+# Refresh staging after correcting stale single-image Review module routing and cache keys 2026-10-12
