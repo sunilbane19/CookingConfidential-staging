@@ -294,3 +294,5 @@ jobs:
 # Refresh deployed index cache key for the single-image Review route.
 
 # Decode literal escaped OCR line breaks before cleanup and generic recipe parsing 2026-10-12.
+
+# Handle double-escaped OCR line breaks before recipe parsing 2026-10-12.
