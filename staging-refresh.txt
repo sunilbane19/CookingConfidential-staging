@@ -1,1 +1,1 @@
-Refresh staging: enhanced image OCR variants (original/enhanced/thresholded; PSM 6/11) and image-review reload fix. 2026-10-12
+Refresh staging: fresh image OCR retry bypass stored text. 2026-10-12 08:10
