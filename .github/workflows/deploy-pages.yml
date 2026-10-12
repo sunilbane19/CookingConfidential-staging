@@ -300,3 +300,5 @@ jobs:
 # Deploy parser-boundary diagnostics for single-image OCR 2026-10-12
 
 # Redeploy corrected parser-boundary diagnostic regexes 2026-10-12
+
+# Force reload upload module so parser diagnostics are loaded 2026-10-12
