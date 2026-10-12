@@ -274,3 +274,5 @@ jobs:
 # Redeploy trigger: image OCR diagnostic instrumentation
 
 # Diagnostic redeploy trigger: image import trace instrumentation in the development branch.
+
+# Diagnostic redeploy trigger: select-one OCR output and cleanup-before-parse change.
