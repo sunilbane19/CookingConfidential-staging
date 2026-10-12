@@ -310,3 +310,5 @@ jobs:
 # Refresh staging after correcting stale single-image Review module routing and cache keys 2026-10-12
 
 # Redeploy staging after image parser preserves Ingredients and Preparation headings 2026-10-12
+
+# Redeploy staging after image OCR noise cleanup refinements 2026-10-12
