@@ -322,3 +322,6 @@ jobs:
 # Redeploy cooking-class C/T/t quantity normalization 2026-10-12
 
 # Fix escaped quantity OCR regex and refresh image import caches 2026-10-12
+
+
+# Deploy recipe-structure-aware Tesseract variant ranking 2026-10-12
