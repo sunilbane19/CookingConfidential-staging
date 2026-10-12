@@ -304,3 +304,5 @@ jobs:
 # Force reload upload module so parser diagnostics are loaded 2026-10-12
 
 # Redeploy staging: use Vision transcription for image imports, then image-specific parser 2026-10-12
+
+# Refresh staging: revert image OCR to Tesseract-only and continue image cleanup tuning 2026-10-12
