@@ -331,3 +331,6 @@ jobs:
 
 
 # Deploy conservative image OCR section cleanup and cache bust 2026-10-12
+
+
+# Deploy image OCR prose cleanup and quantity-token diagnostics 2026-10-12
