@@ -328,3 +328,6 @@ jobs:
 
 
 # Deploy vertical-position Tesseract line merge for image OCR 2026-10-12
+
+
+# Deploy conservative image OCR section cleanup and cache bust 2026-10-12
