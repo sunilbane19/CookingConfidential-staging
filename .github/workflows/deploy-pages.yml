@@ -272,3 +272,5 @@ jobs:
 # Redeploy trigger: restore original rich-text toolbar handling with neutral empty state
 
 # Redeploy trigger: image OCR diagnostic instrumentation
+
+# Diagnostic redeploy trigger: image import trace instrumentation in the development branch.
