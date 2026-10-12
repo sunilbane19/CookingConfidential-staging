@@ -278,3 +278,5 @@ jobs:
 # Diagnostic redeploy trigger: select-one OCR output and cleanup-before-parse change.
 
 # Redeploy staging: images must wait for explicit Review after upload.
+
+# Redeploy staging: route explicit image Review to generic image reader.
