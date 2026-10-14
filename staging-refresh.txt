@@ -1,1 +1,2 @@
 Rollback staging application code to deployment #405 baseline; discard subsequent image OCR diagnostics/experiments. 2026-10-12
+Deploy temporary login-persistence diagnostics from rescue-ocr-fallback-test; cache-busted app.js 1.10.12. 2026-10-14
