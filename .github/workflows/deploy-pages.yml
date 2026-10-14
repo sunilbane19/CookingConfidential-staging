@@ -363,3 +363,5 @@ jobs:
 # Deploy full ingredient crop threshold diagnostics 2026-10-13
 
 # Deploy Staging upload restrictions and remove URL field 2026-10-13
+
+# Redeploy Staging: isolate multi-recipe DOCX title detection and preserve single-recipe PDF/DOCX paths 2026-10-14
