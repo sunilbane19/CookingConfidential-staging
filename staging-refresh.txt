@@ -1,3 +1,4 @@
 Rollback staging application code to deployment #405 baseline; discard subsequent image OCR diagnostics/experiments. 2026-10-12
 Deploy temporary login-persistence diagnostics from rescue-ocr-fallback-test; cache-busted app.js 1.10.12. 2026-10-14
 Deploy Staging session restore diagnostics and sign-in button reset; app.js 1.10.13, signout.js 1.0.5. 2026-10-14
+Deploy explicit panel visibility fix for restored sessions; app.js 1.10.14. 2026-10-14
