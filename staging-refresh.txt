@@ -7,3 +7,5 @@ Deploy Staging email one-time-code sign-in flow; app.js 1.10.15, signout.js 1.0.
 Rollback unusable Staging email-code flow; restore sign-in-link UI while preserving DOCX and confirmation-dialog work. app.js 1.10.16. 2026-10-15
 
 Deploy dietary suitability review fixes; multi-recipe field and selector alignment. 2026-10-15
+
+Deploy careful dietary review alignment and module cache refresh 2026-10-15T10:45+05:30
