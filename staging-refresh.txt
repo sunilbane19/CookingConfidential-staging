@@ -3,3 +3,5 @@ Deploy temporary login-persistence diagnostics from rescue-ocr-fallback-test; ca
 Deploy Staging session restore diagnostics and sign-in button reset; app.js 1.10.13, signout.js 1.0.5. 2026-10-14
 Deploy explicit panel visibility fix for restored sessions; app.js 1.10.14. 2026-10-14
 Deploy Staging email one-time-code sign-in flow; app.js 1.10.15, signout.js 1.0.6. 2026-10-14
+
+Rollback unusable Staging email-code flow; restore sign-in-link UI while preserving DOCX and confirmation-dialog work. app.js 1.10.16. 2026-10-15
