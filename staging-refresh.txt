@@ -9,3 +9,5 @@ Rollback unusable Staging email-code flow; restore sign-in-link UI while preserv
 Deploy dietary suitability review fixes; multi-recipe field and selector alignment. 2026-10-15
 
 Deploy careful dietary review alignment and module cache refresh 2026-10-15T10:45+05:30
+
+Deploy cuisine and dietary row layout plus single-review selector alignment 2026-10-15T11:10+05:30
