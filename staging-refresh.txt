@@ -11,3 +11,4 @@ Deploy dietary suitability review fixes; multi-recipe field and selector alignme
 Deploy careful dietary review alignment and module cache refresh 2026-10-15T10:45+05:30
 
 Deploy cuisine and dietary row layout plus single-review selector alignment 2026-10-15T11:10+05:30
+Prepare Staging PWA email-code flow and cache-bust auth modules after code review. 2026-10-16T04:01:22.955Z
