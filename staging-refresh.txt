@@ -12,3 +12,4 @@ Deploy careful dietary review alignment and module cache refresh 2026-10-15T10:4
 
 Deploy cuisine and dietary row layout plus single-review selector alignment 2026-10-15T11:10+05:30
 Prepare Staging PWA email-code flow and cache-bust auth modules after code review. 2026-10-16T04:01:22.955Z
+Fix missing authenticated header controls on Staging; refresh app.js to 1.10.18 and index version 1.8.2. 2026-10-16T10:35+05:30
