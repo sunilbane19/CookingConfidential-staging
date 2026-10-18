@@ -15,3 +15,5 @@ Prepare Staging PWA email-code flow and cache-bust auth modules after code revie
 Fix missing authenticated header controls on Staging; refresh app.js to 1.10.18 and index version 1.8.2. 2026-10-16T10:35+05:30
 Fix Staging OTP length to match 8-digit Supabase email token; refresh deployed auth module. 2026-10-16T10:45+05:30
 Force cache refresh: app.js 1.10.19, ensure Staging loads 8-digit OTP validation. 2026-10-16T11:00+05:30
+
+Remove visible staging diagnostics; improve blank menu editor line guidance and visible line controls. app.js 1.10.20, menu-editor.js 1.9.25, index 1.8.3. 2026-10-18
