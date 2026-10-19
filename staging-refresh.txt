@@ -20,3 +20,5 @@ Remove visible staging diagnostics; improve blank menu editor line guidance and 
 Improve menu editor: persistent bordered lines and instructions for adding/editing lines; refresh menu-editor.js 1.9.26. 2026-10-18T17:06+05:30
 
 Deploy menu print redesign and rich-text recipe-link toolbar; refresh menu editor 1.9.27 and editor imports 2026-10-19
+
+Deploy menu print footer separators; refresh menu-editor.js 1.9.28. 2026-10-19T15:45+05:30
