@@ -1,0 +1,1 @@
+Refresh Staging to test recipe editor rich-text links: link selected text to an existing recipe by ID or to an HTTPS URL. Confirm sanitization, save/reopen persistence, and click behavior. Source branch: rescue-ocr-fallback-test.
