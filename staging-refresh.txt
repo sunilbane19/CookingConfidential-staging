@@ -18,3 +18,5 @@ Force cache refresh: app.js 1.10.19, ensure Staging loads 8-digit OTP validation
 
 Remove visible staging diagnostics; improve blank menu editor line guidance and visible line controls. app.js 1.10.20, menu-editor.js 1.9.25, index 1.8.3. 2026-10-18
 Improve menu editor: persistent bordered lines and instructions for adding/editing lines; refresh menu-editor.js 1.9.26. 2026-10-18T17:06+05:30
+
+Deploy menu print redesign and rich-text recipe-link toolbar; refresh menu editor 1.9.27 and editor imports 2026-10-19
