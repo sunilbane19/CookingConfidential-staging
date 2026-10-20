@@ -1,0 +1,1 @@
+Staging deployment trigger for the rich-text editor list-toggle infinite-loop fix on recipe-links-staging-test. Do not copy this file into the application bundle.
