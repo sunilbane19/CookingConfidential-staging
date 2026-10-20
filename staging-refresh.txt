@@ -22,3 +22,5 @@ Improve menu editor: persistent bordered lines and instructions for adding/editi
 Deploy menu print redesign and rich-text recipe-link toolbar; refresh menu editor 1.9.27 and editor imports 2026-10-19
 
 Deploy menu print footer separators; refresh menu-editor.js 1.9.28. 2026-10-19T15:45+05:30
+
+Deploy recipe rich-text editor refinements: toolbar/link picker on one row, wider recipe picker, selection-aware Bold/Italic/Underline, list formatting and editor scrolling. Recipe links persist and work in recipe-card view. 2026-10-20. Edit-field link click behaviour remains unresolved; editor changes frozen on Staging feature branch.
