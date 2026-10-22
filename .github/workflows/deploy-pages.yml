@@ -369,3 +369,5 @@ jobs:
 # Deploy server-side recipe library filtering across all paginated results 2026-10-22
 
 # Deploy Edit Save return-state fix 2026-10-22
+
+# Restore library filter toolbar visibility after Edit Save deployment 2026-10-22
