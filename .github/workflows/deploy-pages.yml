@@ -386,3 +386,5 @@ jobs:
 # Refresh isolated Docstream test after correcting expected browser global 2026-10-23
 
 # Deploy isolated legacy .doc import test on Staging 2026-10-23
+
+# Refresh Staging for Cooking Confidential magic-link redirect correction 2026-10-23
