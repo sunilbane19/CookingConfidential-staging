@@ -396,3 +396,5 @@ jobs:
 # Refresh staging for failed-status legacy DOC retry path fix 2026-10-23
 
 # Ensure any extraction failure routes to Rescue Editor; legacy DOC retry safety net 2026-10-23
+
+# Deploy original-.doc Rescue Editor reader and section normalizer
