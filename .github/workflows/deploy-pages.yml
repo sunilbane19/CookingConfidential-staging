@@ -400,3 +400,5 @@ jobs:
 # Deploy original-.doc Rescue Editor reader and section normalizer
 
 # Deploy Appam Docstream section-boundary normalization v1.4.112
+
+# Ensure Appam review module cache-bust references are deployed
