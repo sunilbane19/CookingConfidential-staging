@@ -390,3 +390,5 @@ jobs:
 # Refresh Staging for Cooking Confidential magic-link redirect correction 2026-10-23
 
 # Refresh staging after fixing stale import-review module reference for legacy .doc files
+
+# Redeploy current import review routing for Docstream legacy .doc tests
