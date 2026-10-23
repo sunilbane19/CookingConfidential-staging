@@ -398,3 +398,5 @@ jobs:
 # Ensure any extraction failure routes to Rescue Editor; legacy DOC retry safety net 2026-10-23
 
 # Deploy original-.doc Rescue Editor reader and section normalizer
+
+# Deploy Appam Docstream section-boundary normalization v1.4.112
