@@ -408,3 +408,5 @@ jobs:
 # Refresh Staging after legacy DOC section-boundary and field cleanup 2026-10-23
 
 # Redeploy updated deterministic DOC section fallback 2026-10-23
+
+# Redeploy generalized legacy DOC parsing 2026-10-23
