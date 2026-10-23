@@ -402,3 +402,5 @@ jobs:
 # Deploy Appam Docstream section-boundary normalization v1.4.112
 
 # Ensure Appam review module cache-bust references are deployed
+
+# Deploy corrected regex handling for legacy DOC headings v1.4.113
