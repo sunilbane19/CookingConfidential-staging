@@ -29,6 +29,12 @@ jobs:
           ref: feature/docstream-doc-import-staging
           path: site
 
+      - name: Syntax-check critical JavaScript modules
+        run: |
+          node --check site/import-review-fix.js
+          node --check site/import-inbox-fix.js
+          node --check site/multi-recipe-import.js
+
       - name: Remove production custom domain
         run: rm -f site/CNAME
 
