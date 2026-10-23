@@ -410,3 +410,5 @@ jobs:
 # Redeploy updated deterministic DOC section fallback 2026-10-23
 
 # Redeploy generalized legacy DOC parsing 2026-10-23
+
+# Deploy corrected legacy DOC normalizer regexes v1.4.118 2026-10-23
