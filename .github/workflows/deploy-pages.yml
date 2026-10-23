@@ -422,3 +422,5 @@ jobs:
 # Deploy failed-status legacy DOC deterministic fallback v1.4.119 2026-10-23
 
 # Test legacy .doc Docstream extraction and generalized recipe section cleanup 2026-10-23
+
+# Deploy legacy DOC section parser v1.4.121 so Appam can open normal recipe editor 2026-10-23
