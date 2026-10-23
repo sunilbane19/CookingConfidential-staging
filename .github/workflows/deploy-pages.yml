@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: sunilbane19/CookingConfidential
-          ref: test/docstream-legacy-doc-poc
+          ref: feature/docstream-doc-import-staging
           path: site
 
       - name: Remove production custom domain
@@ -384,3 +384,5 @@ jobs:
 # Refresh isolated Docstream test after correcting browser bundle URL 2026-10-23
 
 # Refresh isolated Docstream test after correcting expected browser global 2026-10-23
+
+# Deploy isolated legacy .doc import test on Staging 2026-10-23
