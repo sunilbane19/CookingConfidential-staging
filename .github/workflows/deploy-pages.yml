@@ -434,3 +434,5 @@ jobs:
 # Deploy valid labelled-text rescue routing to normal recipe editor v1.4.124 / 1.1.5 — 2026-10-24
 
 # Deploy generic imported recipe punctuation spacing cleanup v1.4.125 — 2026-10-24
+
+# Deploy recipe edit return-tab fix app.js 1.10.23 / recipe-edit-fix.js 1.4.28 — 2026-10-24
