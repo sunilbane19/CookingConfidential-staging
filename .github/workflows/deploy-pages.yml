@@ -440,3 +440,5 @@ jobs:
 # Fix Add/Edit recipe-link picker to load unfiltered recipe names v1.3.23 / 1.4.29 — 2026-10-24
 
 # Deploy queued single/multiple import workflow — frozen baseline branch staging-freeze-2026-10-24; work branch feature/multi-import-queue-workflow — 2026-10-24
+
+# Clarify extraction vs review status labels — 2026-10-24
