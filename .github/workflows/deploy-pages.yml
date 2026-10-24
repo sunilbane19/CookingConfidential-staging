@@ -438,3 +438,5 @@ jobs:
 # Deploy recipe edit return-tab fix app.js 1.10.23 / recipe-edit-fix.js 1.4.28 — 2026-10-24
 
 # Fix Add/Edit recipe-link picker to load unfiltered recipe names v1.3.23 / 1.4.29 — 2026-10-24
+
+# Deploy queued single/multiple import workflow — frozen baseline branch staging-freeze-2026-10-24; work branch feature/multi-import-queue-workflow — 2026-10-24
