@@ -444,3 +444,5 @@ jobs:
 # Clarify extraction vs review status labels — 2026-10-24
 
 # Rescue Editor field mapping test build — 2026-10-24
+
+# Rebuild with final Rescue Editor mapping cleanup commit fbdeeab — 2026-10-24
