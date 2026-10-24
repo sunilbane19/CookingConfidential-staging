@@ -430,3 +430,5 @@ jobs:
 # Redeploy after import inbox and index cache-bust updates — 2026-10-23 16:13 UTC
 
 # Deploy legacy DOC stored-extraction fallback 1.4.123 and cache refresh 1.0.98 — 2026-10-24
+
+# Deploy valid labelled-text rescue routing to normal recipe editor v1.4.124 / 1.1.5 — 2026-10-24
