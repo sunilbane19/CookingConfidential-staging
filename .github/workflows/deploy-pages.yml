@@ -442,3 +442,5 @@ jobs:
 # Deploy queued single/multiple import workflow — frozen baseline branch staging-freeze-2026-10-24; work branch feature/multi-import-queue-workflow — 2026-10-24
 
 # Clarify extraction vs review status labels — 2026-10-24
+
+# Rescue Editor field mapping test build — 2026-10-24
