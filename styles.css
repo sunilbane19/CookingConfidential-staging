@@ -273,14 +273,14 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 /* Staging fix: align Dietary / suitability control with Recipe type in the generic recipe editor.
    The multi-select is a div-based control, so it needs the same label/control spacing as native label fields. */
 #detailContent #ccGenericEditorForm .two-col > .cc-multi-field {
-  margin: 26px 0 12px !important;
+  margin: 16px 0 12px !important;
   padding: 0 !important;
   align-self: start !important;
   row-gap: 0 !important;
 }
 #detailContent #ccGenericEditorForm .two-col > .cc-multi-field > .cc-multi-field-label {
   display: block !important;
-  margin: 0 0 16px !important;
+  margin: 0 0 6px !important;
   padding: 0 !important;
   line-height: 1.3 !important;
 }
