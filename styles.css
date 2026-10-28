@@ -295,5 +295,5 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 
 /* Import-editor-only alignment correction. Normal Edit editor is intentionally unaffected. */
 #detailContent #ccGenericEditorForm .two-col > .cc-import-dietary-field {
-  margin-top: 34px !important;
+  margin-top: 16px !important;
 }
