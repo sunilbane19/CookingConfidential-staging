@@ -300,5 +300,5 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 
 /* Fine adjustment: keep the import editor's Dietary label in place and lower only its control by 5px. */
 #detailContent #ccGenericEditorForm .two-col > .cc-import-dietary-field > .cc-multi-field-label {
-  margin-bottom: 8px !important;
+  margin-bottom: 7px !important;
 }
