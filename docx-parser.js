@@ -107,7 +107,7 @@ function escHtml(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt
 
 function textWithBreaks(element){
   const copy=element.cloneNode(true);
-  copy.querySelectorAll('br').forEach(br=>br.replaceWith(copy.ownerDocument.createTextNode('\\n')));
+  copy.querySelectorAll('br').forEach(br=>br.replaceWith(copy.ownerDocument.createTextNode('\n')));
   return copy.textContent||'';
 }
 
