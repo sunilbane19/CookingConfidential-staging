@@ -115,7 +115,7 @@ function docxRecipeBlocks(doc){
 function splitRecipeTitleYield(recipe){
   if(!recipe||typeof recipe.name!=='string')return recipe;
   const name=clean(recipe.name);
-  const match=name.match(/^(.+?)\\s+(serves?|servings?|makes?|yield)\\s+(.+)$/i);
+  const match=name.match(/^(.+?)\s+(serves?|servings?|makes?|yield)\s+(.+)$/i);
   if(match){
     recipe.name=clean(match[1]);
     if(!clean(recipe.servings))recipe.servings=clean(match[2]+' '+match[3]);
