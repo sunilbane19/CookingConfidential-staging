@@ -377,7 +377,7 @@ function editOne(id,x,recipes,i){
       ]},
       {group:[
         {label:'Cuisine',name:'cuisine',value:r.cuisine||''},
-        {label:'Dietary / suitability',name:'dietary_tags',value:Array.isArray(r.dietary_tags)?r.dietary_tags:[],type:'multiselect',options:dietaryOptions}
+        {label:'Dietary / suitability',name:'dietary_tags',value:Array.isArray(r.dietary_tags)?r.dietary_tags:[],type:'multiselect',options:dietaryOptions,className:'cc-multi-field'}
       ]},
       {label:'Servings',name:'servings',value:r.servings||''},
       {label:'Ingredients',name:'ingredients',value:richValue(r.ingredients),type:'richtext'},
