@@ -170,7 +170,7 @@ async function showReview(x,id){
       {label:'Description',name:'description',value:r.description||'',type:'richtext'},
       {label:'Recipe image',name:'image_url',value:r.image_url||'',type:'url',className:'cc-image-field'},
       {group:[
-        {label:'Cuisine',name:'cuisine',value:r.cuisine||'',type:'suggest',options:(Array.isArray(window.ccCuisineOptions)&&window.ccCuisineOptions.length?window.ccCuisineOptions:(window.ccRecipes||[]).map(v=>String(v?.cuisine||'').trim()).filter(Boolean)).filter((v,i,a)=>a.indexOf(v)===i).sort((a,b)=>a.localeCompare(b,undefined,{sensitivity:'base'})),placeholder:'Enter or choose a cuisine'},
+        {label:'Cuisine',name:'cuisine',value:r.cuisine||'',type:'select',allowCustom:true,options:(Array.isArray(window.ccCuisineOptions)&&window.ccCuisineOptions.length?window.ccCuisineOptions:(window.ccRecipes||[]).map(v=>String(v?.cuisine||'').trim()).filter(Boolean)).filter((v,i,a)=>a.indexOf(v)===i).sort((a,b)=>a.localeCompare(b,undefined,{sensitivity:'base'}))},
         {label:'Course',name:'course',value:r.course||'',type:'select',options:courses,allowCustom:true}
       ]},
       {group:[
