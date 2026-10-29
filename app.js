@@ -120,7 +120,15 @@ async function loadMenus(){
   }catch(_){menus=[]}
 }
 
+async function loadCuisineOptions(){
+  try{
+    const {data,error}=await supabase.from('cc_recipes').select('cuisine').not('cuisine','is',null).limit(5000);
+    if(error)throw error;
+    window.ccCuisineOptions=[...new Set((data||[]).map(r=>String(r.cuisine||'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{sensitivity:'base'}));
+  }catch(error){console.warn('Could not load complete cuisine list:',error?.message||error);window.ccCuisineOptions=[...new Set((window.ccRecipes||[]).map(r=>String(r?.cuisine||'').trim()).filter(Boolean))];}
+}
 async function loadData(){
+  await loadCuisineOptions();
   if(view==='menus'||view==='favourites')content.innerHTML='<div class="empty">Loading your library…</div>';
   else {const savedOffset=Number(sessionStorage.getItem('ccRecipeReturnOffset'));sessionStorage.removeItem('ccRecipeReturnOffset');await loadRecipePage({offset:Number.isFinite(savedOffset)&&savedOffset>=0?savedOffset:0,refreshCount:true});}
   await loadMenus();
