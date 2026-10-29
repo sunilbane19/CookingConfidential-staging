@@ -89,14 +89,23 @@ function docxRecipeBlocks(doc){
       !/[.!?]$/.test(text) &&
       !/^(?:ingredients?|method|preparation|instructions?|directions?|notes?|description|step[- ]by[- ]step)/i.test(text);
   };
-  for(const el of [...doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li')]){
+  const elements=[...doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li')];
+  for(let idx=0;idx<elements.length;idx++){
+    const el=elements[idx];
     const text=clean(el.textContent);
     if(!text){if(el.tagName==='P')push();continue;}
     const item={text,bold:/^H[1-6]$/.test(el.tagName)||!!el.querySelector('strong,b'),tag:el.tagName.toLowerCase()};
-    // In Word recipe collections, recipe names are often bold paragraphs rather than
-    // headings. Start a new block only after the current block already has both
-    // recipe section markers. A trailing bold promotional title then starts its own
-    // block and is rejected later because it has no Ingredients + Method sections.
+    // Some cookbooks put the actual recipe name in a plain paragraph and the
+    // translated name/yield in the following bold paragraph, e.g.
+    // "Saoi Mutton" then "Mutton Gravy | Serves 4–6". Treat the plain line as
+    // the recipe boundary when that immediately-following subtitle pattern exists.
+    const next=elements[idx+1];
+    const nextText=clean(next?.textContent);
+    const nextIsYieldSubtitle=!!next&&(/^H[1-6]$/.test(next.tagName)||!!next.querySelector('strong,b'))&&
+      /(?:\\||[–—-])\\s*(?:serves?|servings?|makes?|yield)\\b/i.test(nextText);
+    if(!item.bold&&nextIsYieldSubtitle&&text.length>=3&&text.length<=85&&!/[.!?]$/.test(text))item.bold=true;
+    // Start a new block only after the current block already has both recipe
+    // section markers. The title and its yield subtitle then stay in the same block.
     if(titleLike(item)&&hasIngredientHeading(current)&&hasMethodHeading(current))push();
     current.push(item);
   }
