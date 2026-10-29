@@ -114,7 +114,18 @@ function textWithBreaks(element){
 export function parseDocx(html,fileName='Imported document'){
   const doc=new DOMParser().parseFromString(html,'text/html');
   const nodes=[...doc.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li')]
-    .flatMap(e=>expandedLines(textWithBreaks(e)).map(text=>({raw:text,text,tag:e.tagName.toLowerCase(),bold:/^H[1-6]$/.test(e.tagName)||!!e.querySelector('strong,b'),html:safeInlineHtml(e.innerHTML),listType:e.parentElement?.tagName?.toLowerCase()||''})))
+    .flatMap(e=>{
+      const lines=expandedLines(textWithBreaks(e));
+      // A Word paragraph can contain several soft-break-separated ingredient
+      // lines. Do not attach the entire paragraph HTML to every split line:
+      // doing so repeats the whole ingredient block in the review editor.
+      return lines.map(text=>({
+        raw:text,text,tag:e.tagName.toLowerCase(),
+        bold:/^H[1-6]$/.test(e.tagName)||!!e.querySelector('strong,b'),
+        html:lines.length>1?escHtml(text):safeInlineHtml(e.innerHTML),
+        listType:e.parentElement?.tagName?.toLowerCase()||''
+      }));
+    })
     .filter(n=>n.text);
   if(!nodes.length)return[];
 
