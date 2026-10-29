@@ -112,6 +112,17 @@ function docxRecipeBlocks(doc){
   push();
   return blocks;
 }
+function splitRecipeTitleYield(recipe){
+  if(!recipe||typeof recipe.name!=='string')return recipe;
+  const name=clean(recipe.name);
+  const match=name.match(/^(.+?)\\s+(serves?|servings?|makes?|yield)\\s+(.+)$/i);
+  if(match){
+    recipe.name=clean(match[1]);
+    if(!clean(recipe.servings))recipe.servings=clean(match[2]+' '+match[3]);
+  }
+  return recipe;
+}
+
 function looksLikeIngredientTitle(s){
   const x=clean(s);
   // A title explicitly wrapped in Markdown bold markers in a DOCX is often a pasted
@@ -146,7 +157,7 @@ function parseDocxMulti(html,file,expectedCount=0){
       }).join('');
       const parsed=parseDocx(chunk,file+' — '+block[0].text);
       const recipe=parsed.find(r=>(r.ingredients?.length||0)>=2&&(r.method?.length||0)>0);
-      if(recipe)separated.push(recipe);
+      if(recipe)separated.push(splitRecipeTitleYield(recipe));
     }
   }
   // Once multiple explicitly structured recipe blocks have been found, return only
