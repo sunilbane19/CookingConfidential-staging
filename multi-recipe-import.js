@@ -458,7 +458,7 @@ async function saveMany(id,x,selectedRecipes,allRecipes=selectedRecipes){
  const toSave=selectedRecipes.filter(r=>!existing.has(clean(r.name).toLocaleLowerCase()));
  let savedNames=[],lateDuplicates=[];
  for(const r of toSave){
-  const row={name:clean(r.name),description:clean(r.description)||null,cuisine:clean(r.cuisine)||null,course:clean(r.course)||null,recipe_type:clean(r.recipe_type)||'Dish',servings:clean(r.servings)||null,ingredients:Array.isArray(r.ingredients)?r.ingredients:{html:sanitizeRichHtml(r.ingredients||'')},method:Array.isArray(r.method)?r.method.join('\\n'):sanitizeRichHtml(r.method||''),personal_notes:Array.isArray(r.notes)?(r.notes.join('\\n')||null):(sanitizeRichHtml(r.notes||'')||null),source_type:'file',source_url:null,source_title:x.file_name||null,image_url:clean(r.image_url)||null,created_by:user.id,visibility:'private'};
+  const row={name:clean(r.name),description:clean(r.description)||null,cuisine:clean(r.cuisine)||null,course:clean(r.course)||null,recipe_type:clean(r.recipe_type)||'Dish',servings:clean(r.servings)||null,ingredients:Array.isArray(r.ingredients)?r.ingredients:{html:sanitizeRichHtml(r.ingredients||'')},method:Array.isArray(r.method)?r.method.join('\n'):sanitizeRichHtml(r.method||''),personal_notes:Array.isArray(r.notes)?(r.notes.join('\n')||null):(sanitizeRichHtml(r.notes||'')||null),source_type:'file',source_url:null,source_title:x.file_name||null,image_url:clean(r.image_url)||null,created_by:user.id,visibility:'private'};
   const{error}=await sb.from('cc_recipes').insert(row);
   if(error){
    const raw=String(error.message||'');
