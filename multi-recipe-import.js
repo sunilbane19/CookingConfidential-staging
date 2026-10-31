@@ -456,20 +456,22 @@ async function saveMany(id,x,selectedRecipes,allRecipes=selectedRecipes){
  try{existing=await existingRecipeNames();}catch(e){return window.ccShowError?.('Could not check your collection for duplicate names. No recipes were saved. Please try again.','Could not check duplicates')||alert('Could not check duplicate names.');}
  const duplicates=selectedRecipes.filter(r=>existing.has(clean(r.name).toLocaleLowerCase()));
  const toSave=selectedRecipes.filter(r=>!existing.has(clean(r.name).toLocaleLowerCase()));
- let savedNames=[];
- if(toSave.length){
-  const rows=toSave.map(r=>({name:clean(r.name),description:clean(r.description)||null,cuisine:clean(r.cuisine)||null,course:clean(r.course)||null,recipe_type:clean(r.recipe_type)||'Dish',servings:clean(r.servings)||null,ingredients:Array.isArray(r.ingredients)?r.ingredients:{html:sanitizeRichHtml(r.ingredients||'')},method:Array.isArray(r.method)?r.method.join('\\n'):sanitizeRichHtml(r.method||''),personal_notes:Array.isArray(r.notes)?(r.notes.join('\\n')||null):(sanitizeRichHtml(r.notes||'')||null),source_type:'file',source_url:null,source_title:x.file_name||null,image_url:clean(r.image_url)||null,created_by:user.id,visibility:'private'}));
-  const{error}=await sb.from('cc_recipes').insert(rows);
-  if(error){const raw=String(error.message||'');const duplicate=/cc_recipes_no_duplicate_names|duplicate key value violates unique constraint/i.test(raw);const friendly=duplicate?'A recipe with this name was added while this import was open. It has been kept in the review list; edit its name and try again.':raw;return window.ccShowError?.(friendly,duplicate?'Recipe already saved':'Could not save recipes')||alert(friendly);}
-  savedNames=toSave.map(r=>clean(r.name).toLocaleLowerCase());
+ let savedNames=[],lateDuplicates=[];
+ for(const r of toSave){
+  const row={name:clean(r.name),description:clean(r.description)||null,cuisine:clean(r.cuisine)||null,course:clean(r.course)||null,recipe_type:clean(r.recipe_type)||'Dish',servings:clean(r.servings)||null,ingredients:Array.isArray(r.ingredients)?r.ingredients:{html:sanitizeRichHtml(r.ingredients||'')},method:Array.isArray(r.method)?r.method.join('\\n'):sanitizeRichHtml(r.method||''),personal_notes:Array.isArray(r.notes)?(r.notes.join('\\n')||null):(sanitizeRichHtml(r.notes||'')||null),source_type:'file',source_url:null,source_title:x.file_name||null,image_url:clean(r.image_url)||null,created_by:user.id,visibility:'private'};
+  const{error}=await sb.from('cc_recipes').insert(row);
+  if(error){
+   const raw=String(error.message||'');
+   if(/cc_recipes_no_duplicate_names|duplicate key value violates unique constraint/i.test(raw)){lateDuplicates.push(r);continue;}
+   return window.ccShowError?.(`Saved ${savedNames.length} recipe(s), but stopped on "${clean(r.name)}": ${raw}. Please reopen the import to continue.`,'Some recipes could not be saved')||alert(raw);
+  }
+  savedNames.push(clean(r.name).toLocaleLowerCase());
  }
- let complete=allRecipes;
- try{const cached=typeof x.extracted_text==='string'?JSON.parse(x.extracted_text||'{}'):x.extracted_text;if(cached?.multiple&&Array.isArray(cached.recipes)&&cached.recipes.length)complete=cached.recipes;}catch(_){}
- complete=complete.map(r=>savedNames.includes(clean(r.name).toLocaleLowerCase())?{...r,_reviewed:true,_saved:true,_duplicate:false}:r);
+ let complete=allRecipes.map(r=>savedNames.includes(clean(r.name).toLocaleLowerCase())?{...r,_reviewed:true,_saved:true,_duplicate:false}:r);
  const allDone=complete.length>0&&complete.every(r=>r._saved);
  const{error:ie}=await sb.from('cc_import_items').update({review_status:allDone?'approved':'pending',extraction_status:'ready',source_title:`${savedNames.length} saved from ${x.file_name||'import'}`,extracted_text:JSON.stringify({version:8,multiple:true,recipes:complete})}).eq('id',id);
  if(ie)return window.ccShowError?.(ie.message,'Could not update import')||alert(ie.message);
- const summary=`${savedNames.length} recipe(s) saved; ${duplicates.length} duplicate(s) skipped and retained for editing.`;
+ const skippedCount=duplicates.length+lateDuplicates.length;\n const summary=`${savedNames.length} recipe(s) saved; ${skippedCount} duplicate(s) skipped and retained for editing.`;
  if(allDone){dialog.close();await window.ccReloadRecipes?.();if(window.ccReloadImportInbox)await window.ccReloadImportInbox();return window.ccShowSuccess?.(summary,'Import complete')||alert(summary);}
  await window.ccReloadRecipes?.();
  await render(id,x,complete,summary);
