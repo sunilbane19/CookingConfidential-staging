@@ -377,9 +377,18 @@ async function extract(id,show=true){if(show){dialog.querySelector('#detailConte
 });await sb.from('cc_import_items').update({extracted_text:JSON.stringify({version:7,multiple:true,recipes}),source_title:recipes[0]?.name||x.file_name,extraction_status:'ready',review_status:'pending',error_message:null}).eq('id',id);if(show)render(id,x,recipes);return {item:x,recipes};}catch(e){if(show)fail(e?.message||String(e));throw e;}}
 function fail(msg){dialog.querySelector('#detailContent').innerHTML=`<button class="close" type="button">×</button><p class="eyebrow">IMPORT ERROR</p><h2>Recipe extraction failed</h2><p class="small-note">${esc(msg)}</p>`;dialog.querySelector('.close').onclick=()=>dialog.close();}
 async function existingRecipeNames(){
- const{data,error}=await sb.from('cc_recipes').select('name').range(0,9999);
- if(error)throw error;
- return new Set((data||[]).map(r=>clean(r.name).toLocaleLowerCase()).filter(Boolean));
+ // Use the same paginated search RPC as the visible recipe library so duplicate
+ // checks and the collection always agree on which recipes are currently visible.
+ const names=new Set();let offset=0;const pageSize=24;
+ while(true){
+  const{data,error}=await sb.rpc('cc_search_recipe_cards_staging',{p_search:'',p_favourite_only:false,p_offset:offset,p_limit:pageSize});
+  if(error)throw error;
+  const rows=Array.isArray(data)?data:[];
+  rows.forEach(r=>{const name=clean(r?.name).toLocaleLowerCase();if(name)names.add(name)});
+  if(rows.length<pageSize)break;
+  offset+=pageSize;
+ }
+ return names;
 }
 async function render(id,x,recipes,message=''){
  const host=dialog.querySelector('#detailContent');
