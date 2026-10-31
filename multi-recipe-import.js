@@ -471,7 +471,8 @@ async function saveMany(id,x,selectedRecipes,allRecipes=selectedRecipes){
  const allDone=complete.length>0&&complete.every(r=>r._saved);
  const{error:ie}=await sb.from('cc_import_items').update({review_status:allDone?'approved':'pending',extraction_status:'ready',source_title:`${savedNames.length} saved from ${x.file_name||'import'}`,extracted_text:JSON.stringify({version:8,multiple:true,recipes:complete})}).eq('id',id);
  if(ie)return window.ccShowError?.(ie.message,'Could not update import')||alert(ie.message);
- const skippedCount=duplicates.length+lateDuplicates.length;\n const summary=`${savedNames.length} recipe(s) saved; ${skippedCount} duplicate(s) skipped and retained for editing.`;
+ const skippedCount=duplicates.length+lateDuplicates.length;
+ const summary=`${savedNames.length} recipe(s) saved; ${skippedCount} duplicate(s) skipped and retained for editing.`;
  if(allDone){dialog.close();await window.ccReloadRecipes?.();if(window.ccReloadImportInbox)await window.ccReloadImportInbox();return window.ccShowSuccess?.(summary,'Import complete')||alert(summary);}
  await window.ccReloadRecipes?.();
  await render(id,x,complete,summary);
