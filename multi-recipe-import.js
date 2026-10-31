@@ -465,7 +465,8 @@ async function saveMany(id,x,selectedRecipes,allRecipes=selectedRecipes){
    if(/cc_recipes_no_duplicate_names|duplicate key value violates unique constraint/i.test(raw)){lateDuplicates.push(r);continue;}
    return window.ccShowError?.(`Saved ${savedNames.length} recipe(s), but stopped on "${clean(r.name)}": ${raw}. Please reopen the import to continue.`,'Some recipes could not be saved')||alert(raw);
   }
-  savedNames.push(clean(r.name).toLocaleLowerCase());\n  savedRecipes.push(r);
+  savedNames.push(clean(r.name).toLocaleLowerCase());
+  savedRecipes.push(r);
  }
  let complete=allRecipes.map(r=>savedRecipes.includes(r)?{...r,_reviewed:true,_saved:true,_duplicate:false}:r);
  const allDone=complete.length>0&&complete.every(r=>r._saved);
