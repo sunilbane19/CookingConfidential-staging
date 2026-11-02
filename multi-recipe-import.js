@@ -176,7 +176,7 @@ function parseTextMulti(text,file){
   const ls=String(text||'').replace(/\\r/g,'').split('\\n').map(clean);
   const isIngredients=s=>/^(?:the\\s+)?ingredients?(?:\\s+(?:list|needed|required))?\\s*:?$/i.test(clean(s));
   const isMethod=s=>/^(?:(?:the\\s+)?(?:method|preparation|instructions?|directions?|steps?)|step[- ]by[- ]step(?:\\s+cooking)?\\s+instructions?)\\s*:?$/i.test(clean(s));
-  const isMeta=s=>/^(?:serves?|servings?|makes?|yield|description|notes?|tips?)\\s*:?$/i.test(clean(s));
+  const isMeta=s=>/^(?:serves?|servings?|makes?|yield|description|notes?|tips?)\\s*[:;]?$/i.test(clean(s));
   const isTitle=s=>{
     const x=clean(s);
     return x.length>=4&&x.length<=85&&!/[.!?]$/.test(x)&&
@@ -212,9 +212,9 @@ function parseTextMulti(text,file){
       if(isIngredients(s)){mode='ingredients';continue;}
       if(isMethod(s)){mode='method';continue;}
       if(/^description\\s*:?$/i.test(s)){mode='description';continue;}
-      if(/^serves?\\s*:?\\s*(.*)$/i.test(s)){
-        const m=s.match(/^serves?\\s*:?\\s*(.*)$/i);
-        if(m[1])recipe.servings=clean(m[1]);
+      if(/^serves?\\s*[:;]?\\s*(.*)$/i.test(s)){
+        const m=s.match(/^serves?\\s*[:;]?\\s*(.*)$/i);
+        if(m[1])recipe.servings=clean(m[1].replace(/^[-;:]\\s*/,''));
         else if(ls[i+1]&&!isMeta(ls[i+1]))recipe.servings=clean(ls[++i]);
         continue;
       }
