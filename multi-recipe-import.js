@@ -192,7 +192,7 @@ function parseTextMulti(text,file){
     // Find the first plausible title after the preceding recipe's Method
     // heading. The title may be followed by a translated subtitle, SERVES,
     // and/or a Description section before Ingredients.
-    const lo=Math.max(lastMethod+1,i-14);
+    const lo=Math.max(lastMethod+1,i-60);
     let title=-1;
     for(let j=lo;j<i;j++){
       if(isTitle(ls[j])){title=j;break;}
