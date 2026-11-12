@@ -132,6 +132,7 @@ export function parseDocx(html,fileName='Imported document'){
   const candidates=[]; let section='';
   for(let i=0;i<nodes.length;i++){
     const t=nodes[i].text;
+    if(/^description\\s*:?$/i.test(t)){section='description';continue;}
     if(SECTION.ingredients.test(t)){section='ingredients';continue;}
     if(SECTION.method.test(t)){section='method';continue;}
     if(SECTION.notes.test(t)){section='notes';continue;}
@@ -181,6 +182,7 @@ export function parseDocx(html,fileName='Imported document'){
     const rich={ingredients:[],method:[],notes:[]};
     for(const n of nodes.slice(start+1,end)){
       const t=cleanRecipeText(n.text);
+      if(/^description\\s*:?$/i.test(t)){current='description';continue;}
       if(SECTION.ingredients.test(t)){current='ingredients';continue;}
       if(SECTION.method.test(t)){current='method';continue;}
       if(SECTION.notes.test(t)){current='notes';continue;}
@@ -216,6 +218,10 @@ export function parseDocx(html,fileName='Imported document'){
         continue;
       }
 
+      if(current==='description'){
+        description.push(t);
+        continue;
+      }
       if(!current){
         // Keep a subtitle as description while separating yield/serving metadata.
         // Example: "Mutton Gravy | Serves 4–6" -> description "Mutton Gravy",
