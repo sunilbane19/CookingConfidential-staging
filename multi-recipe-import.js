@@ -81,8 +81,8 @@ function makeRecipe(name){return {name:clean(name)||'Imported recipe',descriptio
 function docxRecipeBlocks(doc){
   const blocks=[]; let current=[];
   const push=()=>{if(current.length){blocks.push(current);current=[];}};
-  const hasIngredientHeading=items=>items.some(item=>/^(?:the\\s+)?ingredients?(?:\\s+(?:list|needed|required))?\\s*:?$/i.test(clean(item.text)));
-  const hasMethodHeading=items=>items.some(item=>/^(?:(?:the\\s+)?(?:method|preparation|instructions?|directions?|steps?)|step[- ]by[- ]step(?:\\s+cooking)?\\s+instructions?)\\s*:?$/i.test(clean(item.text)));
+  const hasIngredientHeading=items=>items.some(item=>/^(?:the\s+)?ingredients?(?:\s+(?:list|needed|required))?\s*:?$/i.test(clean(item.text)));
+  const hasMethodHeading=items=>items.some(item=>/^(?:(?:the\s+)?(?:method|preparation|instructions?|directions?|steps?)|step[- ]by[- ]step(?:\s+cooking)?\s+instructions?)\s*:?$/i.test(clean(item.text)));
   const titleLike=item=>{
     const text=clean(item.text);
     return item.bold && text.length>=4 && text.length<=85 &&
