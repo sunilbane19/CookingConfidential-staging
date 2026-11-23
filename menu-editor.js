@@ -134,20 +134,20 @@ function styles(){
  .cc-menu-clear-selection{margin-left:auto}
  body.cc-menu-printing #ccMenuPrintPage{display:block!important}
  #ccMenuPrintPage{display:none}
- .cc-menu-view-dialog{width:min(900px,94vw);max-width:900px;max-height:92vh;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);box-shadow:0 20px 70px #0003}
+ .cc-menu-view-dialog{width:min(900px,94vw);max-width:900px;height:min(92vh,900px);max-height:92vh;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);box-shadow:0 20px 70px #0003;overflow:hidden;display:flex;flex-direction:column}
  .cc-menu-view-dialog::backdrop{background:rgba(30,25,20,.58)}
  .cc-menu-view-head{padding:28px 34px 20px;border-bottom:1px solid var(--line);position:relative}
  .cc-menu-view-head .eyebrow{font:10px Arial,sans-serif;letter-spacing:2px;color:var(--accent);margin:0 0 8px}
  .cc-menu-view-head h2{font:normal 32px/1.15 Georgia,serif;margin:0 40px 8px 0;color:var(--ink)}
  .cc-menu-view-meta{font:13px/1.5 Georgia,serif;color:var(--muted)}
- .cc-menu-view-body{padding:28px 34px;max-height:62vh;overflow:auto;font:16px/1.6 Georgia,"Times New Roman",serif}
+ .cc-menu-view-body{padding:28px 34px;flex:1 1 auto;min-height:0;max-height:none;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;font:16px/1.6 Georgia,"Times New Roman",serif}
  .cc-menu-view-line{margin:0 0 12px;min-height:0;padding:0;border:0;line-height:1.55}
  .cc-menu-view-line h1,.cc-menu-view-line h2,.cc-menu-view-line h3,.cc-menu-view-line h4{font-family:Georgia,serif;line-height:1.2;margin:12px 0 7px}
  .cc-menu-view-line ul,.cc-menu-view-line ol{padding-left:24px;margin:5px 0 12px}
  .cc-menu-view-divider{border:0;border-top:1px solid var(--line);margin:18px 0}
- .cc-menu-view-actions{display:flex;justify-content:flex-end;gap:9px;padding:14px 34px 22px;border-top:1px solid var(--line)}
+ .cc-menu-view-actions{display:flex;flex:0 0 auto;justify-content:flex-end;flex-wrap:wrap;gap:9px;padding:14px 34px 22px;border-top:1px solid var(--line);background:var(--card)}
  .cc-menu-view-close{position:absolute;right:20px;top:18px;border:1px solid var(--line);background:var(--paper);border-radius:8px;width:34px;height:34px;font-size:20px;cursor:pointer}
- @media(max-width:650px){.cc-menu-view-head{padding:22px 20px 16px}.cc-menu-view-head h2{font-size:26px}.cc-menu-view-body{padding:20px;max-height:65vh}.cc-menu-view-actions{padding:12px 20px 18px}}
+ @media(max-width:650px){.cc-menu-view-dialog{height:92vh}.cc-menu-view-head{padding:22px 20px 16px}.cc-menu-view-head h2{font-size:26px}.cc-menu-view-body{padding:20px;max-height:none}.cc-menu-view-actions{padding:12px 20px 18px;justify-content:flex-start}}
  @media print{
    @page{size:A4 portrait;margin:15mm 17mm 17mm}
    body.cc-menu-printing{padding:0!important;margin:0!important;background:#fff!important}
@@ -603,11 +603,23 @@ async function showMenu(menu){
    return '<div class="cc-menu-view-line">'+html+'</div>';
  }).join('');
  const date=formatMenuDate(menu.menu_date||'');
- d.innerHTML='<header class="cc-menu-view-head"><button type="button" class="cc-menu-view-close" aria-label="Close">×</button><p class="eyebrow">COOKING CONFIDENTIAL · MENU</p><h2>'+esc(menu.name||'Menu')+'</h2><div class="cc-menu-view-meta">'+(menu.occasion?esc(menu.occasion):'')+(menu.occasion&&date?' · ':'')+esc(date)+'</div></header><main class="cc-menu-view-body">'+(body||'<p class="small-note">This menu has no saved menu lines.</p>')+'</main><footer class="cc-menu-view-actions"><button type="button" class="secondary" data-view-print>Print</button><button type="button" class="primary" data-view-edit>Edit menu</button></footer>';
+ d.innerHTML='<header class="cc-menu-view-head"><button type="button" class="cc-menu-view-close" aria-label="Close">×</button><p class="eyebrow">COOKING CONFIDENTIAL · MENU</p><h2>'+esc(menu.name||'Menu')+'</h2><div class="cc-menu-view-meta">'+(menu.occasion?esc(menu.occasion):'')+(menu.occasion&&date?' · ':'')+esc(date)+'</div></header><main class="cc-menu-view-body">'+(body||'<p class="small-note">This menu has no saved menu lines.</p>')+'</main><footer class="cc-menu-view-actions"><button type="button" class="secondary" data-view-fav>'+(menu.is_favourite?'★ Remove favourite':'☆ Add to favourites')+'</button><button type="button" class="secondary" data-view-share>Share</button><button type="button" class="secondary" data-view-print>Print</button><button type="button" class="primary" data-view-edit>Edit menu</button></footer>';
  if(!d.isConnected)document.body.appendChild(d);
  d.querySelector('.cc-menu-view-close').onclick=()=>d.close();
+ d.querySelector('[data-view-fav]').onclick=async()=>{
+   const next=!menu.is_favourite;
+   const result=await supabase.from('cc_menus').update({is_favourite:next}).eq('id',menu.id).select('id,is_favourite').single();
+   if(result.error)return window.ccShowError?.(result.error.message,'Could not update favourite');
+   menu.is_favourite=Boolean(result.data?.is_favourite);
+   const cached=(window.ccMenus||[]).find(x=>Number(x.id)===Number(menu.id));
+   if(cached)cached.is_favourite=menu.is_favourite;
+   d.querySelector('[data-view-fav]').textContent=menu.is_favourite?'★ Remove favourite':'☆ Add to favourites';
+   window.ccRenderMenus?.();
+ };
+ d.querySelector('[data-view-share]').onclick=()=>shareMenu(menu);
  d.querySelector('[data-view-print]').onclick=()=>printMenuDocument(menu);
  d.querySelector('[data-view-edit]').onclick=()=>{d.close();openEditor(menu)};
+ d.querySelector('.cc-menu-view-body').querySelectorAll('a[data-recipe-id]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const id=Number(link.dataset.recipeId);d.close();window.ccOpenRecipe?.(id)}));
  if(!d.open)d.showModal();
 }
 function menuActions(){
