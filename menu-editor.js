@@ -594,8 +594,8 @@ function showMenu(menu){
  const source=docFromMenu(menu),blocks=Array.isArray(source.blocks)?source.blocks:[];
  const body=blocks.map(b=>{
    if(b.type==='divider')return '<hr class="cc-menu-view-divider">';
-   const html=cleanHtml(String(b.html||'')).replace(/↑\\s*↓\\s*×/g,'').trim();
-   if(!html||/^<br\\s*\\/?\\s*>$/i.test(html))return '';
+   const html=cleanHtml(String(b.html||'')).replace(/↑\s*↓\s*×/g,'').trim();
+   if(!html||/^<br\s*\/?\s*>$/i.test(html))return '';
    return '<div class="cc-menu-view-line">'+html+'</div>';
  }).join('');
  const date=formatMenuDate(menu.menu_date||'');
