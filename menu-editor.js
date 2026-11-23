@@ -588,10 +588,14 @@ async function uploadExisting(){
  renderUploadLibrary();
 }
 function newBlank(){openEditor({name:'',menu_date:'',guest_count:null,occasion:'',document:{version:1,blocks:[{type:'line',html:''}]},is_favourite:false},{newMenu:true})}
-function showMenu(menu){
+async function showMenu(menu){
  const d=document.querySelector('#ccMenuViewDialog')||document.createElement('dialog');
  d.id='ccMenuViewDialog';d.className='cc-menu-view-dialog';
- const source=docFromMenu(menu),blocks=Array.isArray(source.blocks)?source.blocks:[];
+ const source=docFromMenu(menu);let blocks=Array.isArray(source.blocks)?source.blocks:[];
+ if(!blocks.length&&menu.id){
+   const legacy=await supabase.from('cc_menu_items').select('sort_order,custom_label,section,recipe_id,cc_recipes(id,name)').eq('menu_id',menu.id).order('sort_order');
+   if(!legacy.error&&legacy.data?.length)blocks=legacy.data.map(x=>({type:'line',html:'<a href="#recipe-'+x.recipe_id+'" data-recipe-id="'+x.recipe_id+'">'+esc(x.custom_label||x.cc_recipes?.name||'Recipe')+'</a>'}));
+ }
  const body=blocks.map(b=>{
    if(b.type==='divider')return '<hr class="cc-menu-view-divider">';
    const html=cleanHtml(String(b.html||'')).replace(/↑\s*↓\s*×/g,'').trim();
