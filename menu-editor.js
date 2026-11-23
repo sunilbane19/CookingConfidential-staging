@@ -149,7 +149,7 @@ function styles(){
  .cc-menu-view-close{position:absolute;right:20px;top:18px;border:1px solid var(--line);background:var(--paper);border-radius:8px;width:34px;height:34px;font-size:20px;cursor:pointer}
  @media(max-width:650px){.cc-menu-view-dialog{height:92vh}.cc-menu-view-head{padding:22px 20px 16px}.cc-menu-view-head h2{font-size:26px}.cc-menu-view-body{padding:20px;max-height:none}.cc-menu-view-actions{padding:12px 20px 18px;justify-content:flex-start}}
  @media print{
-   @page{size:A4 portrait;margin:15mm 17mm 17mm}
+   @page{size:A4 portrait;margin:15mm 17mm 25mm}
    body.cc-menu-printing{padding:0!important;margin:0!important;background:#fff!important}
    body.cc-menu-printing>*:not(#ccMenuPrintPage){display:none!important}
    body.cc-menu-printing #ccMenuPrintPage{display:block!important;width:176mm;margin:0 auto;background:#fff;color:#24231f}
@@ -173,7 +173,7 @@ function styles(){
    #ccMenuPrintPage .cc-print-document .cc-menu-block{padding:0!important;margin:0 0 3mm!important;min-height:0!important;break-inside:avoid}
    #ccMenuPrintPage .cc-print-document .cc-menu-block::before{content:none!important;display:none!important}
    #ccMenuPrintPage .cc-print-document .cc-divider{border:0;border-top:.3mm solid #ddd6ca;height:1px;padding:0!important;margin:4mm 0!important}
-   #ccMenuPrintPage .cc-print-footer{display:flex;justify-content:space-between;gap:8mm;margin-top:10mm;padding-top:3mm;border-top:.25mm solid #ddd6ca;font:8pt Arial,sans-serif;color:#77736a}
+   #ccMenuPrintPage .cc-menu-print-footer{position:fixed;left:17mm;right:17mm;bottom:6mm;display:flex;justify-content:center;gap:2mm;margin:0;padding-top:3mm;border-top:.25mm solid #ddd6ca;font:8pt Arial,sans-serif;color:#77736a;background:#fff}
    #ccMenuPrintPage a{color:#9b3f2f;text-decoration:none}
  }
  @media print{
@@ -619,7 +619,7 @@ async function showMenu(menu){
  d.querySelector('[data-view-share]').onclick=()=>shareMenu(menu);
  d.querySelector('[data-view-print]').onclick=()=>printMenuDocument(menu);
  d.querySelector('[data-view-edit]').onclick=()=>{d.close();openEditor(menu)};
- d.querySelector('.cc-menu-view-body').querySelectorAll('a[data-recipe-id]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const id=Number(link.dataset.recipeId);d.close();window.ccOpenRecipe?.(id)}));
+ d.querySelector('.cc-menu-view-body').querySelectorAll('a[data-recipe-id]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();const id=Number(link.dataset.recipeId);const recipeTab=window.open('about:blank','_blank');if(!recipeTab){window.ccShowError?.('Please allow pop-ups for Cooking Confidential to open a linked recipe in a new tab.','Pop-up blocked');return}if(window.ccOpenRecipePrintWindow)window.ccOpenRecipePrintWindow(id,recipeTab);else{recipeTab.close();window.ccShowError?.('The recipe viewer is still loading. Please try again.','Recipe viewer unavailable')}}));
  if(!d.open)d.showModal();
 }
 function menuActions(){
