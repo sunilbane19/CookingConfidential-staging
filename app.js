@@ -187,7 +187,7 @@ function renderFavourites(q=''){
   const menuSection=`<div class="section-head cc-favourites-subhead"><h2>Menus</h2><span class="count">${menuMatches.length} menus</span></div>${menuMatches.length?'<div class="cc-menu-library-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start">'+menuMatches.map(favouriteMenuCard).join('')+'</div>':'<div class="empty">No favourite menus.</div>'}`;
   content.innerHTML=recipeSection+menuSection; content.querySelectorAll('.card').forEach(c=>c.onclick=()=>showRecipe(+c.dataset.id)); window.ccMenus=menuMatches; window.ccRenderMenus=()=>view==='favourites'?renderFavourites(search.value.trim().toLowerCase()):renderMenus(search.value.trim().toLowerCase()); setTimeout(()=>window.ccEnsureLibraryToolbar?.(),0); window.dispatchEvent(new CustomEvent('cc:recipes-rendered'));
 }
-async function ccMenuAction(action){try{if(!window.ccMenuEditor){await import('./menu-editor.js?v=1.9.24')}const m=window.ccMenuEditor;if(!m||typeof m[action]!=='function')throw new Error('Menu editor action unavailable');m[action]()}catch(e){console.error('Cooking Confidential menu action:',e);window.ccShowError?.(e.message||'Could not open menu editor','Menu editor')}}
+async function ccMenuAction(action){try{if(!window.ccMenuEditor){await import('./menu-editor.js?v=1.9.36')}const m=window.ccMenuEditor;if(!m||typeof m[action]!=='function')throw new Error('Menu editor action unavailable');m[action]()}catch(e){console.error('Cooking Confidential menu action:',e);window.ccShowError?.(e.message||'Could not open menu editor','Menu editor')}}
 window.ccMenuAction=ccMenuAction;
 function renderAll(q=''){
   const menuMatches=menus.filter(m=>menuMatchesSearch(m,q));
