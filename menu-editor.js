@@ -66,9 +66,9 @@ function styles(){
  .cc-menu-block:focus{border:1px solid var(--accent);background:#fffdf9;box-shadow:inset 0 0 0 1px rgba(155,63,47,.12)} .cc-menu-block:hover{border-color:#b79b88;background:#fffdf9} .cc-menu-document .cc-menu-block[contenteditable="true"]:has(> br:first-child){min-height:46px} .cc-menu-block h1,.cc-menu-block h2,.cc-menu-block h3,.cc-menu-block h4,.cc-menu-block h5,.cc-menu-block h6{margin:0 0 8px}.cc-menu-block table{border-collapse:collapse;width:100%;margin:6px 0;table-layout:auto}.cc-menu-block th,.cc-menu-block td{border:1px solid var(--line);padding:5px 7px;vertical-align:top;text-align:inherit}
  .cc-menu-block.cc-divider{border-top:1px solid var(--line);height:1px;min-height:1px;padding:0;margin:16px 4px}
  .cc-menu-block .cc-block-controls{position:absolute;right:6px;top:50%;transform:translateY(-50%);display:flex;gap:4px;opacity:.9;z-index:4;align-items:center;white-space:nowrap;background:rgba(255,255,255,.94);padding:2px;border-radius:7px;border:1px solid var(--line)}
- .cc-menu-block:has(> br:first-child) .cc-block-controls{top:calc(50% - 10px)}
- .cc-menu-block:has(> br:first-child)::before{content:'Click here to type a menu line';display:block;color:#8b8177;font:italic 14px Arial,sans-serif;pointer-events:none;padding:3px 0 5px;border:1px dashed #d5c6b8;border-radius:5px;margin:-2px 0 0;padding-left:8px;min-height:28px}
- .cc-menu-block:has(> br:first-child):focus-within::before{display:none} .cc-menu-document .cc-menu-block[contenteditable="true"]::selection,.cc-menu-document .cc-menu-block[contenteditable="true"] *::selection{background:#f1c9bd;color:#241b17} .cc-menu-editor-hint{font:12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 8px;padding:8px 10px;border-left:3px solid var(--accent);background:#f8f3eb}
+ .cc-menu-block.cc-menu-empty .cc-block-controls{top:calc(50% - 10px)}
+ .cc-menu-block.cc-menu-empty::before{content:'Click here to type a menu line';display:block;color:#8b8177;font:italic 14px Arial,sans-serif;pointer-events:none;padding:3px 0 5px;border:1px dashed #d5c6b8;border-radius:5px;margin:-2px 0 0;padding-left:8px;min-height:28px}
+ .cc-menu-block.cc-menu-empty:focus-within::before{display:none} .cc-menu-document .cc-menu-block[contenteditable="true"]::selection,.cc-menu-document .cc-menu-block[contenteditable="true"] *::selection{background:#f1c9bd;color:#241b17} .cc-menu-editor-hint{font:12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 8px;padding:8px 10px;border-left:3px solid var(--accent);background:#f8f3eb}
  .cc-menu-block:hover .cc-block-controls,.cc-menu-block:focus-within .cc-block-controls{opacity:1}
  .cc-block-controls button{border:1px solid #c9bdb0;background:#f8f3eb;color:#352b25;border-radius:5px;width:30px;height:30px;padding:0;font:600 14px Arial;cursor:pointer;box-shadow:0 1px 2px #0001}
  .cc-menu-meta{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
@@ -157,6 +157,7 @@ function styles(){
    #ccMenuPrintPage .cc-print-document ul,#ccMenuPrintPage .cc-print-document ol{margin:0 0 3mm;padding-left:7mm}
    #ccMenuPrintPage .cc-print-document li{padding-left:1mm;margin:0 0 1mm}
    #ccMenuPrintPage .cc-print-document .cc-menu-block{padding:0!important;margin:0 0 3mm!important;min-height:0!important;break-inside:avoid}
+   #ccMenuPrintPage .cc-print-document .cc-menu-block::before{content:none!important;display:none!important}
    #ccMenuPrintPage .cc-print-document .cc-divider{border:0;border-top:.3mm solid #ddd6ca;height:1px;padding:0!important;margin:4mm 0!important}
    #ccMenuPrintPage .cc-print-footer{display:flex;justify-content:space-between;gap:8mm;margin-top:10mm;padding-top:3mm;border-top:.25mm solid #ddd6ca;font:8pt Arial,sans-serif;color:#77736a}
    #ccMenuPrintPage a{color:#9b3f2f;text-decoration:none}
@@ -273,7 +274,7 @@ async function printMenuDocument(contentOrMenu){
  const previous=document.querySelector('#ccMenuPrintPage');if(previous)previous.remove();
  const sheet=document.createElement('div');sheet.id='ccMenuPrintPage';
  const page=document.createElement('div');page.className='cc-print-page';
- const clone=doc.cloneNode(true);clone.removeAttribute('contenteditable');clone.classList.add('cc-print-document');clone.querySelectorAll('.cc-block-controls,[contenteditable="false"]').forEach(x=>{if(x.classList.contains('cc-block-controls'))x.remove()});
+ const clone=doc.cloneNode(true);clone.removeAttribute('contenteditable');clone.classList.add('cc-print-document');clone.querySelectorAll('.cc-block-controls,[contenteditable="false"]').forEach(x=>{if(x.classList.contains('cc-block-controls'))x.remove()});clone.querySelectorAll('.cc-menu-block').forEach(el=>{el.classList.remove('cc-menu-empty');const blank=!el.textContent.trim()&&!el.querySelector('img,table');if(blank)el.remove()});
  const header=document.createElement('header');header.className='cc-menu-print-header';
  header.innerHTML='<div class="cc-menu-print-brand"><span class="cc-menu-print-logo">CC</span><span>Cooking Confidential</span><span class="cc-menu-print-rule"></span><span class="cc-menu-print-label">MENU</span></div><h1>'+title+'</h1>'+(occasion?'<p class="cc-menu-print-occasion">'+occasion+'</p>':'')+(date?'<p class="cc-menu-print-date">'+date+'</p>':'');
  const footer=document.createElement('footer');footer.className='cc-menu-print-footer';footer.innerHTML='<span>Cooking Confidential</span><span class="cc-menu-print-separator">|</span><span>Good Food Well Remembered</span>';
@@ -304,7 +305,7 @@ async function applyDocxParagraphAlignment(html,arrayBuffer){
 }
 function blockMarkup(b,i){
  if(b.type==='divider')return '<div class="cc-menu-block cc-divider" data-index="'+i+'" contenteditable="false"><div class="cc-block-controls" contenteditable="false"><button type="button" data-move="-1" title="Move up">↑</button><button type="button" data-move="1" title="Move down">↓</button><button type="button" data-delete="1" title="Delete">×</button></div></div>';
- const cleanedHtml=cleanHtml(String(b.html||'')).replace(/↑\s*↓\s*×/g,''); const blockHtml=cleanedHtml.trim()?cleanedHtml:'<br>'; return '<div class="cc-menu-block" data-index="'+i+'" contenteditable="true">'+blockHtml+'<div class="cc-block-controls" contenteditable="false"><button type="button" data-move="-1" title="Move up">↑</button><button type="button" data-move="1" title="Move down">↓</button><button type="button" data-delete="1" title="Delete">×</button></div></div>'
+ const cleanedHtml=cleanHtml(String(b.html||'')).replace(/↑\s*↓\s*×/g,''); const empty=!cleanedHtml.trim()||/^<br\s*\/?\s*>$/i.test(cleanedHtml.trim()); const blockHtml=empty?'<br>':cleanedHtml; return '<div class="cc-menu-block'+(empty?' cc-menu-empty':'')+'" data-index="'+i+'" contenteditable="true">'+blockHtml+'<div class="cc-block-controls" contenteditable="false"><button type="button" data-move="-1" title="Move up">↑</button><button type="button" data-move="1" title="Move down">↓</button><button type="button" data-delete="1" title="Delete">×</button></div></div>'
 }
 async function openEditor(menu,{blocks=null,sourceLabel='',newMenu=false}={}){
  styles();const d=ensureDialog();let source=blocks?{version:1,blocks}:docFromMenu(menu);if(!blocks&&menu.id&&!(source.blocks||[]).length){const legacy=await supabase.from('cc_menu_items').select('sort_order,custom_label,section,recipe_id,cc_recipes(id,name)').eq('menu_id',menu.id).order('sort_order');if(!legacy.error&&legacy.data?.length){source={version:1,blocks:legacy.data.map(x=>({type:'line',html:'<a href=\"#recipe-'+x.recipe_id+'\" data-recipe-id=\"'+x.recipe_id+'\">'+esc(x.custom_label||x.cc_recipes?.name||'Recipe')+'</a>'}))}}}const initial=normalizeBlocks(source.blocks||[]);if(!initial.length)initial.push({type:'line',html:'<br>'});
@@ -329,6 +330,7 @@ const refreshRecipeOptions=()=>{
 };
 cuisineFilter.onchange=refreshRecipeOptions;
 content.querySelector('#ccMenuClearSelection').onclick=()=>clearSelection();
+content.querySelector('#ccMenuDocument').addEventListener('input',e=>{const block=e.target.closest?.('.cc-menu-block');if(!block)return;const clone=block.cloneNode(true);clone.querySelectorAll('.cc-block-controls').forEach(x=>x.remove());const empty=!clone.textContent.trim()&&!clone.querySelector('img,table');block.classList.toggle('cc-menu-empty',empty)});
 content.querySelector('#ccMenuDocument').addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();clearSelection()}});
 content.querySelector('#ccMenuDocument').addEventListener('click',e=>{if(e.target===e.currentTarget)clearSelection()});
 content.querySelector('#ccMenuDocument').addEventListener('click',e=>{
