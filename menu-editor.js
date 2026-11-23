@@ -310,6 +310,21 @@ dateInput.addEventListener('change',()=>{if(dateInput.value)dateInput.setCustomV
 content.querySelector('#ccMenuClearSelection').onclick=()=>clearSelection();
 content.querySelector('#ccMenuDocument').addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();clearSelection()}});
 content.querySelector('#ccMenuDocument').addEventListener('click',e=>{if(e.target===e.currentTarget)clearSelection()});
+content.querySelector('#ccMenuDocument').addEventListener('click',e=>{
+ const block=e.target.closest('.cc-menu-block[contenteditable="true"]');
+ if(!block||e.target.closest('.cc-block-controls'))return;
+ if(block.textContent.trim())return;
+ block.focus();
+ const sel=getSelection();
+ if(!sel)return;
+ const range=document.createRange();
+ range.selectNodeContents(block);
+ range.collapse(true);
+ sel.removeAllRanges();
+ sel.addRange(range);
+ lastEditorBlock=block;
+ lastRange=range.cloneRange();
+});
 content.querySelector('#ccMenuEditorClose').onclick=()=>d.close();
  const reviewOriginal=content.querySelector('#ccMenuReviewOriginal');if(reviewOriginal)reviewOriginal.onclick=e=>{e.preventDefault();showOriginal(menu)};
  content.querySelectorAll('[data-cmd]').forEach(b=>{b.onmousedown=e=>e.preventDefault();b.onclick=()=>{const ed=getSelectionEditor();if(!ed)return;ed.focus();exec(b.dataset.cmd)}});
