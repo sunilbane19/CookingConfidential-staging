@@ -319,3 +319,10 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 #detailContent #ccGenericEditorForm .cc-classification-field .cc-multi-trigger{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;padding:10px 8px!important;font-size:12px!important;}
 #detailContent #ccGenericEditorForm .cc-classification-field .cc-multi-field-label{white-space:nowrap!important;font-size:12px!important;}
 #detailContent #ccGenericEditorForm .cc-classification-field .cc-multi-panel{min-width:0!important;max-width:calc(100vw - 40px)!important;}
+
+/* Staging: cuisine, course and recipe type on one desktop row, responsive on smaller screens. */
+#detailContent #ccGenericEditorForm .cc-recipe-meta-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;align-items:start!important;width:100%!important;margin:0 0 12px!important;}
+#detailContent #ccGenericEditorForm .cc-recipe-meta-grid>label{min-width:0!important;width:100%!important;margin:0!important;}
+#detailContent #ccGenericEditorForm .cc-recipe-meta-grid select,#detailContent #ccGenericEditorForm .cc-recipe-meta-grid input{width:100%!important;min-width:0!important;}
+@media(max-width:760px){#detailContent #ccGenericEditorForm .cc-recipe-meta-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;}}
+@media(max-width:480px){#detailContent #ccGenericEditorForm .cc-recipe-meta-grid{grid-template-columns:minmax(0,1fr)!important;gap:8px!important;}}
