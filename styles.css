@@ -302,3 +302,12 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 #detailContent #ccGenericEditorForm .two-col > .cc-import-dietary-field > .cc-multi-field-label {
   margin-bottom: 7px !important;
 }
+
+
+/* Compact dietary suitability badges shared across recipe cards, detail, print and share views. */
+.cc-dietary-badges{display:flex;flex-wrap:wrap;align-items:center;gap:3px;margin:7px 0 10px;line-height:1}
+.cc-dietary-icon{display:inline-flex;flex:0 0 20px;width:20px;height:20px;align-items:center;justify-content:center;box-sizing:border-box;border-radius:4px;color:#fff;font:700 11px/1 Arial,sans-serif;letter-spacing:-.25px;text-decoration:none;white-space:nowrap}
+.cc-card-dietary{flex-wrap:nowrap;gap:3px;max-width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;padding:1px 0}
+.cc-card-dietary::-webkit-scrollbar{display:none}
+#detailContent .detail-section .cc-dietary-badges{margin:4px 0 0}
+@media print{.cc-dietary-icon{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
