@@ -1,4 +1,4 @@
-import { getDietaryIconData, renderDietaryBadges } from './dietary-icons.js?v=1.0.0';
+import { getDietaryIconData, renderDietaryBadges } from './dietary-icons.js?v=1.0.1';
 import { sanitizeRichHtml } from './generic-editor.js?v=1.3.22';
 const MARGIN=18;
 function clean(value=''){return String(value??'').trim()}
