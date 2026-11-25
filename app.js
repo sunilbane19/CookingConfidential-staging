@@ -134,7 +134,7 @@ async function loadSaladPage({offset=0}={}) {
     const missingCreatorIds=creatorIds.filter(id=>!creatorNameCache.has(id));
     if(missingCreatorIds.length){const members=await supabase.from('cc_members').select('auth_user_id,display_name').in('auth_user_id',missingCreatorIds);if(!members.error){const found=new Map((members.data||[]).map(m=>[m.auth_user_id,m.display_name||'']));missingCreatorIds.forEach(id=>creatorNameCache.set(id,found.get(id)||''));}}
     saladRecipes=rows.map(r=>({...r,creator_name:creatorNameCache.get(r.created_by)||''}));
-    window.ccSaladRecipes=saladRecipes;
+    window.ccSaladRecipes=saladRecipes;window.ccRecipes=saladRecipes;
     if(requestId===saladRequestId)renderSalads();
   }finally{if(requestId===saladRequestId)saladLoading=false}
 }
