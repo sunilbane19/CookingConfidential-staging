@@ -24,5 +24,5 @@ export function getDietaryIconData(tags){
 export function renderDietaryBadges(tags,className='cc-dietary-badges'){
   const items=getDietaryIconData(tags);
   if(!items.length)return '';
-  return '<div class="'+className+'" role="list" aria-label="Dietary and suitability">'+items.map(item=>'<span class="cc-dietary-icon" role="listitem" title="'+item.label+'" aria-label="'+item.label+'" style="background-color:'+item.color+'">'+item.code+'</span>').join('')+'</div>';
+  return '<div class="'+className+'" role="list" aria-label="Dietary and suitability" style="display:flex;flex-wrap:wrap;align-items:center;gap:3px;margin:7px 0 10px;line-height:1">'+items.map(item=>'<span class="cc-dietary-icon" role="listitem" title="'+item.label+'" aria-label="'+item.label+'" style="display:inline-flex;flex:0 0 20px;width:20px;height:20px;align-items:center;justify-content:center;box-sizing:border-box;border-radius:4px;background-color:'+item.color+';color:#fff;font:700 11px/1 Arial,sans-serif;letter-spacing:-.25px;text-decoration:none;white-space:nowrap">'+item.code+'</span>').join('')+'</div>';
 }
