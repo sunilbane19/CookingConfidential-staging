@@ -311,3 +311,11 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 .cc-card-dietary::-webkit-scrollbar{display:none}
 #detailContent .detail-section .cc-dietary-badges{margin:4px 0 0}
 @media print{.cc-dietary-icon{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+
+/* Add/Edit recipe: the three approved classification multiselects share one compact row. */
+#detailContent #ccGenericEditorForm .two-col:has(.cc-classification-field){grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;align-items:start!important;}
+#detailContent #ccGenericEditorForm .cc-classification-field{min-width:0!important;width:100%!important;}
+#detailContent #ccGenericEditorForm .cc-classification-field .cc-multi-trigger{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;padding:10px 8px!important;font-size:12px!important;}
+#detailContent #ccGenericEditorForm .cc-classification-field .cc-multi-field-label{white-space:nowrap!important;font-size:12px!important;}
+#detailContent #ccGenericEditorForm .cc-classification-field .cc-multi-panel{min-width:0!important;max-width:calc(100vw - 40px)!important;}
