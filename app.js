@@ -123,8 +123,11 @@ async function loadSaladPage({offset=0}={}) {
   saladOffset=safeOffset;saladLoading=true;
   content.innerHTML='<div class="empty">Loading salads and dressings…</div>';
   try{
-    let base=supabase.from('cc_recipes').select(SALAD_CARD_FIELDS,{count:'exact'})
-      .or('course.ilike.Salad,recipe_type.ilike.Dressing');
+    let base=supabase.from('cc_recipes').select(SALAD_CARD_FIELDS,{count:'exact'});
+    if(saladType==='soups')base=base.or('course.ilike.%Soup%,recipe_type.ilike.%Soup%');
+    else if(saladType==='salads')base=base.or('course.ilike.%Salad%,recipe_type.ilike.%Salad%').not('recipe_type','ilike','%Dressing%');
+    else if(saladType==='dressings')base=base.or('course.ilike.%Dressing%,recipe_type.ilike.%Dressing%');
+    else base=base.or('course.ilike.%Soup%,course.ilike.%Salad%,recipe_type.ilike.%Soup%,recipe_type.ilike.%Salad%,recipe_type.ilike.%Dressing%');
     if(saladCuisine)base=base.eq('cuisine',saladCuisine);
     if(q)base=base.ilike('name','%'+q.replace(/[,%()]/g,' ')+'%');
     const pageResult=await base.order('created_at',{ascending:false,nullsFirst:false}).order('id',{ascending:false}).range(safeOffset,safeOffset+RECIPE_PAGE_SIZE-1);
