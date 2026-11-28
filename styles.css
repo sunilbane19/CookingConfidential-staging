@@ -401,3 +401,20 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
     scroll-margin-inline:18px;
   }
 }
+
+
+/* Mobile scroll hint for the library section tabs. */
+.cc-mobile-tabs-hint{display:none}
+@media(max-width:760px){
+  .cc-mobile-tabs-hint{
+    display:block;
+    margin:-3px 0 8px;
+    padding:0 4px;
+    text-align:right;
+    color:var(--muted);
+    font:11px/1.4 Arial,Helvetica,sans-serif;
+    letter-spacing:.02em;
+    pointer-events:none;
+  }
+  .cc-mobile-tabs-hint[hidden]{display:none!important}
+}
