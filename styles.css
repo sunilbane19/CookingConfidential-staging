@@ -418,3 +418,45 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
   }
   .cc-mobile-tabs-hint[hidden]{display:none!important}
 }
+
+
+/* Staging: place every recipe-section filter toolbar at the same right edge. */
+.cc-salad-toolbar{
+  width:100%!important;
+  box-sizing:border-box!important;
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,280px))!important;
+  justify-content:end!important;
+  align-items:end!important;
+  gap:14px!important;
+}
+.cc-salad-toolbar label{
+  width:100%!important;
+  min-width:0!important;
+}
+.cc-salad-toolbar select{
+  width:100%!important;
+  box-sizing:border-box!important;
+}
+.cc-salad-toolbar.cc-starter-toolbar,
+.cc-salad-toolbar.cc-main-toolbar{
+  grid-template-columns:minmax(0,280px)!important;
+  justify-content:end!important;
+}
+@media(max-width:760px){
+  .cc-salad-toolbar{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    justify-content:end!important;
+    gap:10px!important;
+  }
+  .cc-salad-toolbar.cc-starter-toolbar,
+  .cc-salad-toolbar.cc-main-toolbar{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
+@media(max-width:520px){
+  .cc-salad-toolbar{
+    grid-template-columns:minmax(0,1fr)!important;
+    justify-content:end!important;
+  }
+}
