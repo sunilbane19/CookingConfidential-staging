@@ -371,3 +371,33 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
 .cc-salad-toolbar label{display:block;width:100%;margin:0;font:11px Arial,sans-serif;color:var(--muted)}
 @media(max-width:760px){.cc-salad-toolbar{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}.cc-starter-toolbar{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:520px){.cc-salad-toolbar{grid-template-columns:minmax(0,1fr)}}
+
+
+/* Mobile section navigation: keep all library tabs in one swipeable row. */
+@media(max-width:760px){
+  .tabs{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    justify-content:flex-start!important;
+    align-items:stretch!important;
+    gap:18px!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    white-space:nowrap!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    padding:0 0 10px!important;
+  }
+  .tabs::-webkit-scrollbar{display:none!important}
+  .tabs>.tab{
+    flex:0 0 auto!important;
+    width:auto!important;
+    max-width:none!important;
+    white-space:nowrap!important;
+    scroll-margin-inline:18px;
+  }
+}
