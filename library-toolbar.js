@@ -37,8 +37,11 @@ function applyServerFilter(kind,value=''){
 }
 function ensure(){
   const content=document.querySelector('#content'); if(!content||content.hidden)return;
-  const active=document.querySelector('.tab.active')?.dataset.view||'recipes';
+  const active=document.querySelector('.primary-tabs .tab.active')?.dataset.view||'recipes';
   document.querySelector('#ccLibraryTools')?.remove();
+  // Category pages have their own category-specific filters and pagination.
+  // Do not add the general Recipes toolbar while a recipe subsection is active.
+  if(active==='recipes' && document.querySelector('.recipe-tabs .tab.active')) return;
   const head=content.querySelector('.section-head'); if(!head)return;
   const tools=document.createElement('div'); tools.id='ccLibraryTools';
   if(active==='recipes'){
