@@ -460,3 +460,26 @@ dialog .dialog-card{box-sizing:border-box;max-width:100%;min-width:0;overflow-x:
     justify-content:end!important;
   }
 }
+
+/* Staging navigation hierarchy: primary destinations always visible, recipe categories nested below Recipes. */
+.tabs.primary-tabs{
+ display:flex!important;flex-wrap:nowrap!important;justify-content:space-between!important;align-items:center!important;
+ gap:clamp(10px,2.2vw,28px)!important;overflow:visible!important;white-space:nowrap!important;padding:0 5vw!important;
+}
+.primary-tabs>.tab{flex:0 0 auto!important;white-space:nowrap!important}
+.recipe-tabs{display:none;align-items:stretch;gap:clamp(12px,2.5vw,24px);padding:0 5vw;border-bottom:1px solid var(--line);min-width:0}
+#appPanel.cc-show-recipe-tabs .recipe-tabs{display:flex}
+.recipe-tabs>.tab{flex:0 0 auto;white-space:nowrap}
+@media(max-width:760px){
+ .tabs.primary-tabs{padding:0 18px!important;gap:clamp(10px,3vw,22px)!important;justify-content:space-between!important}
+ .tabs.primary-tabs>.tab{font-size:13px!important}
+ .recipe-tabs{
+  display:none!important;flex-wrap:nowrap!important;justify-content:flex-start!important;gap:18px!important;
+  width:100%!important;max-width:100%!important;overflow-x:auto!important;overflow-y:hidden!important;
+  white-space:nowrap!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;padding:0 18px 9px!important;
+ }
+ #appPanel.cc-show-recipe-tabs .recipe-tabs{display:flex!important}
+ .recipe-tabs::-webkit-scrollbar{display:none!important}
+ .recipe-tabs>.tab{flex:0 0 auto!important;font-size:12px!important;padding:13px 0!important;scroll-margin-inline:18px}
+}
